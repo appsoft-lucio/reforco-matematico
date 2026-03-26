@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reforço de Matemática - Prof. Lúcio</title>
+  <style>
+    :root {
+      --azul: #0f4c81;
+      --azul-escuro: #08263f;
+      --azul-claro: #1f6fb2;
+      --amarelo: #ffbf00;
+      --branco: #ffffff;
+      --cinza: #f3f6fb;
+      --texto: #1f2937;
+      --texto-claro: #dbe7f3;
+      --verde: #25d366;
+      --vermelho: #ef4444;
+      --sombra: 0 18px 45px rgba(0, 0, 0, 0.16);
+      --borda: 1px solid rgba(255,255,255,0.14);
+      --radius: 24px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* ajuste para header fixo não cobrir conteúdo */
+    section {
+      scroll-margin-top: 90px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--cinza);
+      color: var(--texto);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1150px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(8, 38, 63, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--branco);
+      font-weight: bold;
+    }
+
+    .brand-badge {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--amarelo), #ffda66);
+      color: #111827;
+      display: grid;
+      place-items: center;
+      font-size: 1rem;
+      font-weight: 800;
+      box-shadow: var(--sombra);
+    }
+
+    .brand-text {
+      display: grid;
+      line-height: 1.1;
+    }
+
+    .brand-text small {
+      color: var(--texto-claro);
+      font-weight: 500;
+      font-size: .8rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--branco);
+      font-weight: 600;
+      opacity: .95;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 22px;
+      border-radius: 16px;
+      font-weight: 700;
+      transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+      box-shadow: var(--sombra);
+      cursor: pointer;
+      border: 0;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: .97;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--amarelo), #ffd34f);
+      color: #111827;
+    }
+
+    .btn-whatsapp {
+      background: linear-gradient(135deg, #1faa52, var(--verde));
+      color: var(--branco);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--branco);
+      border: 1px solid rgba(255,255,255,.22);
+      box-shadow: none;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top right, rgba(255,191,0,.18), transparent 28%),
+        radial-gradient(circle at bottom left, rgba(37,211,102,.12), transparent 24%),
+        linear-gradient(135deg, var(--azul), var(--azul-escuro));
+      color: var(--branco);
+      padding: 78px 0 84px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -120px -120px auto;
+      width: 340px;
+      height: 340px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 50%;
+      filter: blur(10px);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 34px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.12);
+      border: var(--borda);
+      margin-bottom: 18px;
+      font-size: .92rem;
+      font-weight: 700;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 4.6vw, 4rem);
+      line-height: 1.08;
+      margin-bottom: 18px;
+      max-width: 740px;
+    }
+
+    .hero p {
+      color: var(--texto-claro);
+      font-size: 1.08rem;
+      max-width: 660px;
+      margin-bottom: 26px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 26px;
+    }
+
+    .hero-info {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(140px, 1fr));
+      gap: 14px;
+    }
+
+    .info-box {
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255,255,255,.10);
+      border: var(--borda);
+    }
+
+    .info-box strong {
+      display: block;
+      font-size: 1.1rem;
+      margin-bottom: 4px;
+      color: var(--amarelo);
+    }
+
+    .hero-side {
+      display: grid;
+      gap: 18px;
+    }
+
+    .teacher-card,
+    .hero-panel {
+      background: rgba(255,255,255,.10);
+      border: var(--borda);
+      border-radius: var(--radius);
+      padding: 22px;
+      backdrop-filter: blur(10px);
+      box-shadow: var(--sombra);
+    }
+
+    .teacher-image {
+      width: 100%;
+      max-width: 320px;
+      margin: 0 auto 18px;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 3px solid rgba(255,255,255,.2);
+      background: rgba(255,255,255,.12);
+      aspect-ratio: 4/5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--texto-claro);
+      text-align: center;
+      padding: 20px;
+    }
+
+    .teacher-card h3,
+    .hero-panel h3 {
+      margin-bottom: 8px;
+      font-size: 1.25rem;
+    }
+
+    .teacher-card p,
+    .hero-panel p {
+      color: var(--texto-claro);
+    }
+
+    .hero-list {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .hero-list li::before,
+    .lista li::before {
+      content: "✔ ";
+      color: #86efac;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 82px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: clamp(1.9rem, 3vw, 2.5rem);
+      color: var(--azul-escuro);
+    }
+
+    .subtitle {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 42px;
+      color: #4b5563;
+      font-size: 1.02rem;
+    }
+
+    .grid-3,
+    .grid-2 {
+      display: grid;
+      gap: 22px;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+      background: var(--branco);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: var(--sombra);
+      border: 1px solid rgba(15,76,129,.07);
+    }
+
+    .card h3 {
+      color: var(--azul);
+      margin-bottom: 10px;
+      font-size: 1.18rem;
+    }
+
+    .card p {
+      color: #4b5563;
+    }
+
+    .card-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, rgba(15,76,129,.12), rgba(31,111,178,.12));
+      margin-bottom: 16px;
+      font-size: 1.4rem;
+    }
+
+    .lista {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .benefits {
+      background: linear-gradient(180deg, #ffffff, #eef4fc);
+    }
+
+    .pricing {
+      background: linear-gradient(135deg, #e8f2fc, #f8fbff);
+    }
+
+    .price-wrap {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .price-box,
+    .price-side {
+      background: var(--branco);
+      border-radius: 28px;
+      box-shadow: var(--sombra);
+      padding: 30px;
+    }
+
+    .price-badge {
+      display: inline-block;
+      background: rgba(37,211,102,.14);
+      color: #166534;
+      font-weight: 700;
+      padding: 8px 14px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+    }
+
+    .price {
+      font-size: clamp(2.7rem, 5vw, 4rem);
+      line-height: 1;
+      font-weight: 900;
+      color: var(--azul-escuro);
+      margin: 12px 0;
+    }
+
+    .price small {
+      font-size: 1rem;
+      color: #4b5563;
+      font-weight: 600;
+    }
+
+    .price-note {
+      color: #4b5563;
+      margin-bottom: 18px;
+    }
+
+    .schedule-box {
+      margin-top: 18px;
+      background: #f8fbff;
+      border: 1px solid rgba(15,76,129,.08);
+      border-radius: 20px;
+      padding: 18px;
+    }
+
+    .schedule-box h4 {
+      margin-bottom: 10px;
+      color: var(--azul-escuro);
+    }
+
+    .schedule-list {
+      display: grid;
+      gap: 8px;
+      color: #374151;
+    }
+
+    .cta-strip {
+      background: linear-gradient(135deg, var(--azul-escuro), var(--azul));
+      color: var(--branco);
+      border-radius: 28px;
+      padding: 32px;
+      box-shadow: var(--sombra);
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .cta-strip p {
+      color: var(--texto-claro);
+      margin-top: 8px;
+    }
+
+    .faq {
+      display: grid;
+      gap: 14px;
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    details {
+      background: var(--branco);
+      border-radius: 18px;
+      padding: 18px 20px;
+      box-shadow: var(--sombra);
+      border: 1px solid rgba(15,76,129,.07);
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--azul-escuro);
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details p {
+      margin-top: 12px;
+      color: #4b5563;
+    }
+
+    footer {
+      background: #071d31;
+      color: var(--branco);
+      padding: 46px 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .footer-card {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 24px;
+      padding: 24px;
+    }
+
+    .footer-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .footer-card p,
+    .footer-card li {
+      color: var(--texto-claro);
+    }
+
+    .footer-list {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #1faa52, var(--verde));
+      color: #fff;
+      font-size: 1.5rem;
+      box-shadow: 0 18px 30px rgba(37, 211, 102, 0.35);
+      z-index: 200;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .price-wrap,
+      .cta-strip,
+      .footer-grid,
+      .grid-3,
+      .grid-2,
+      .hero-info {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding-top: 56px;
+      }
+
+      .section {
+        padding: 62px 0;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .teacher-image {
+        max-width: 260px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="brand-badge">∑</div>
+        <div class="brand-text">
+          <span>Prof. Lúcio</span>
+          <small>Reforço de Matemática</small>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#valor">Mensalidade</a>
+        <a href="#faq">Dúvidas</a>
+        <a class="btn btn-primary" href="#contato">Quero uma vaga</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="fade-up">
+        <div class="hero-badge">📚 Matrículas abertas • Turmas reduzidas</div>
+        <h1>Reforço de Matemática com cara de curso profissional</h1>
+        <p>
+          Aulas para alunos do <strong>6º ano do Ensino Fundamental ao 3º ano do Ensino Médio</strong>,
+          com explicação clara, acompanhamento individual, revisão para provas e material de apoio incluso.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-whatsapp" href="https://wa.me/5531983044087?text=Ol%C3%A1%2C%20vi%20a%20p%C3%A1gina%20de%20refor%C3%A7o%20de%20matem%C3%A1tica%20e%20quero%20mais%20informa%C3%A7%C3%B5es." target="_blank">Falar no WhatsApp</a>
+          <a class="btn btn-outline" href="#valor">Ver mensalidade</a>
+        </div>
+
+        <div class="hero-info">
+          <div class="info-box">
+            <strong>2x</strong>
+            aulas por semana
+          </div>
+          <div class="info-box">
+            <strong>1h</strong>
+            por aula
+          </div>
+          <div class="info-box">
+            <strong>4</strong>
+            alunos no máximo
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-side fade-up">
+        <div class="teacher-card">
+          <div class="teacher-image">
+            <img src="img/foto-perfil.jpg" alt="Foto do Professor Lúcio" style="width:100%; height:100%; object-fit: cover;" />
+          </div>
+          <h3>Prof. Lúcio</h3>
+          <p>
+            Reforço escolar de matemática com foco em organização, evolução do aluno e melhora real no desempenho escolar.
+          </p>
+          <ul class="hero-list">
+            <li>Turmas pequenas</li>
+            <li>Material incluso</li>
+            <li>Revisão para provas</li>
+            <li>Relatório de desempenho</li>
+          </ul>
+        </div>
+
+        <div class="hero-panel">
+          <h3>Atendimento em Vespasiano e São José da Lapa</h3>
+          <p>
+            Estrutura organizada, ambiente tranquilo e horários planejados para facilitar a rotina dos pais e dos alunos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sobre">
+    <div class="container">
+      <h2 class="section-title fade-up">Como funciona o reforço</h2>
+      <p class="subtitle fade-up">
+        Um modelo simples, prático e profissional para ajudar o aluno a aprender matemática com mais clareza e segurança.
+      </p>
+
+      <div class="grid-3">
+        <div class="card fade-up">
+          <div class="card-icon">🎯</div>
+          <h3>Público atendido</h3>
+          <ul class="lista">
+            <li>6º ao 9º ano do Ensino Fundamental</li>
+            <li>1º ao 3º ano do Ensino Médio</li>
+            <li>Alunos com dificuldade ou defasagem</li>
+          </ul>
+        </div>
+
+        <div class="card fade-up">
+          <div class="card-icon">🧮</div>
+          <h3>Formato das aulas</h3>
+          <ul class="lista">
+            <li>2 aulas por semana</li>
+            <li>1 hora por aula</li>
+            <li>Até 4 alunos por turma</li>
+            <li>Acompanhamento individual</li>
+          </ul>
+        </div>
+
+        <div class="card fade-up" id="diferenciais">
+          <div class="card-icon">📈</div>
+          <h3>Objetivo do trabalho</h3>
+          <ul class="lista">
+            <li>Melhorar o entendimento do conteúdo</li>
+            <li>Dar mais segurança para resolver exercícios</li>
+            <li>Preparar para trabalhos e provas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section benefits">
+    <div class="container">
+      <h2 class="section-title fade-up">Diferenciais que valorizam o serviço</h2>
+      <p class="subtitle fade-up">
+        Não é apenas uma aula. É um acompanhamento pensado para ajudar o aluno a evoluir de verdade.
+      </p>
+
+      <div class="grid-2">
+        <div class="card fade-up">
+          <h3>O que está incluído</h3>
+          <ul class="lista">
+            <li>Explicação simples e prática</li>
+            <li>Listas de exercícios</li>
+            <li>Revisão antes das provas</li>
+            <li>Material de apoio incluso</li>
+          </ul>
+        </div>
+
+        <div class="card fade-up">
+          <h3>Mais profissionalismo</h3>
+          <ul class="lista">
+            <li>Relatório de desempenho do aluno</li>
+            <li>Turmas reduzidas</li>
+            <li>Ambiente organizado</li>
+            <li>Atendimento por WhatsApp para responsáveis</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section pricing" id="valor">
+    <div class="container">
+      <h2 class="section-title fade-up">Mensalidade</h2>
+      <p class="subtitle fade-up">
+        Valor pensado para manter qualidade, acompanhamento e um formato acessível para a realidade local.
+      </p>
+
+      <div class="price-wrap">
+        <div class="price-box fade-up">
+          <span class="price-badge">Plano mensal</span>
+          <p>Reforço de matemática com aulas regulares</p>
+          <div class="price">R$ 300 <small>/ mês</small></div>
+          <p class="price-note">2 aulas por semana • 1 hora cada</p>
+          <ul class="lista" style="margin-bottom:22px;">
+            <li>Turmas com até 4 alunos</li>
+            <li>Material incluso</li>
+            <li>Revisão para provas</li>
+            <li>Relatório de desempenho</li>
+          </ul>
+          <a class="btn btn-whatsapp" href="https://wa.me/5531983044087?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20as%20aulas%20de%20refor%C3%A7o%20de%20matem%C3%A1tica." target="_blank">Solicitar informações</a>
+        </div>
+
+        <div class="price-side fade-up">
+          <h3 style="margin-bottom:10px; color: var(--azul-escuro); font-size:1.5rem;">Horários e organização</h3>
+          <p style="color:#4b5563; margin-bottom:16px;">
+            As turmas são organizadas por nível para facilitar o acompanhamento e manter a aula mais produtiva.
+          </p>
+
+          <div class="schedule-box">
+            <h4>Formato das aulas</h4>
+            <div class="schedule-list">
+              <div>• Aulas individuais</div>
+              <div>• Atendimento personalizado</div>
+              <div>• Foco na dificuldade do aluno</div>
+            </div>
+          </div>
+          </div>
+
+          <div class="schedule-box">
+            <h4>Atendimento</h4>
+            <div class="schedule-list">
+              <div>• Vespasiano</div>
+              <div>• São José da Lapa</div>
+              <div>• Contato rápido por WhatsApp</div>
+            </div>
+          </div>
+
+          <div class="schedule-box">
+            <h4>Ideal para quem busca</h4>
+            <div class="schedule-list">
+              <div>• melhorar nas provas</div>
+              <div>• recuperar conteúdo atrasado</div>
+              <div>• estudar com mais organização</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta-strip fade-up">
+        <div>
+          <h2 style="font-size: clamp(1.8rem, 3vw, 2.4rem); line-height:1.15;">Quer deixar a página com aparência ainda mais profissional?</h2>
+          <p>
+            Você pode usar sua foto, seus banners e até depoimentos para transformar esta página em uma landing page forte para anunciar no Facebook e no WhatsApp.
+          </p>
+        </div>
+        <div>
+          <a class="btn btn-primary" href="#contato">Quero personalizar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq">
+    <div class="container">
+      <h2 class="section-title fade-up">Perguntas frequentes</h2>
+      <div class="faq">
+        <details class="fade-up">
+          <summary>As aulas são individuais?</summary>
+          <p>As aulas são em turmas pequenas, com no máximo 4 alunos, o que permite atenção individual durante a aula.</p>
+        </details>
+
+        <details class="fade-up">
+          <summary>Tem revisão para provas?</summary>
+          <p>Sim. O aluno recebe revisão específica antes das provas, com foco nos conteúdos que mais geram dificuldade.</p>
+        </details>
+
+        <details class="fade-up">
+          <summary>O material está incluso?</summary>
+          <p>Sim. O material de apoio e as listas de exercícios já fazem parte do acompanhamento.</p>
+        </details>
+
+        <details class="fade-up">
+          <summary>Como faço para matricular?</summary>
+          <p>Basta entrar em contato pelo WhatsApp para verificar disponibilidade de horários e vagas nas turmas.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contato">
+    <div class="container footer-grid">
+      <div class="footer-card fade-up">
+        <h3>Prof. Lúcio — Reforço de Matemática</h3>
+        <p>
+          Página criada para divulgação profissional do reforço escolar com foco em alunos do Ensino Fundamental II e Ensino Médio.
+        </p>
+        <ul class="footer-list">
+          <li>📍 Vespasiano / São José da Lapa</li>
+          <li>📞 WhatsApp: 31 98304-4087</li>
+          <li>📚 Do 6º ano ao 3º ano do Ensino Médio</li>
+        </ul>
+      </div>
+
+      <div class="footer-card fade-up">
+        <h3>Fale agora</h3>
+        <p>Entre em contato para tirar dúvidas, verificar horários e solicitar uma vaga.</p>
+        <br />
+        <a class="btn btn-whatsapp" href="https://wa.me/5531983044087?text=Ol%C3%A1%2C%20quero%20matricular%20um%20aluno%20no%20refor%C3%A7o%20de%20matem%C3%A1tica." target="_blank">Chamar no WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <a class="floating-whatsapp" href="https://wa.me/5531983044087?text=Ol%C3%A1%2C%20quero%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20refor%C3%A7o%20de%20matem%C3%A1tica." target="_blank" aria-label="Falar no WhatsApp">✆</a>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // scroll suave com correção para header fixo
+      const links = document.querySelectorAll('a[href^="#"]');
+      links.forEach(link => {
+        link.addEventListener('click', function(e) {
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            const offset = target.offsetTop - 80;
+            window.scrollTo({ top: offset, behavior: 'smooth' });
+          }
+        });
+      });
+      const details = document.querySelectorAll('details');
+      const animatedElements = document.querySelectorAll('.fade-up');
+
+      details.forEach((item) => {
+        item.addEventListener('toggle', () => {
+          if (item.open) {
+            details.forEach((other) => {
+              if (other !== item) other.open = false;
+            });
+          }
+        });
+      });
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          }
+        });
+      }, {
+        threshold: 0.12
+      });
+
+      animatedElements.forEach((element) => observer.observe(element));
+    });
+  </script>
+</body>
+</html>
