@@ -2,27 +2,29 @@
 <html lang="pt-BR">
   <head>
     <!-- =========================================================
-       CONFIGURAÇÕES BÁSICAS DA PÁGINA
+       CONFIGURAÇÕES BÁSICAS
        ========================================================= -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <!-- =========================================================
-       SEO BÁSICO
-       Título e descrição são muito importantes para o Google
+       SEO
        ========================================================= -->
     <title>
       Reforço de Matemática em Vespasiano e São José da Lapa | Prof. Lúcio
     </title>
+
     <meta
       name="description"
-      content="Reforço de matemática para alunos do 6º ano do Ensino Fundamental ao 3º ano do Ensino Médio em Vespasiano e São José da Lapa. Turmas pequenas, separadas por série, revisão para provas e material incluso."
+      content="Reforço de matemática para alunos do 6º ano do Ensino Fundamental ao 3º ano do Ensino Médio em Vespasiano e São José da Lapa. Turmas pequenas, separadas por série, revisão para provas, material incluso e condição especial para alunos da rede pública."
     />
+
     <meta
       name="keywords"
       content="reforço de matemática, aulas de matemática, professor de matemática, reforço escolar, Vespasiano, São José da Lapa, ensino fundamental, ensino médio, aulas particulares de matemática"
     />
+
     <meta name="author" content="Prof. Lúcio" />
     <meta name="robots" content="index, follow" />
     <link
@@ -31,14 +33,19 @@
     />
 
     <!-- =========================================================
-       OPEN GRAPH (Facebook / WhatsApp / redes sociais)
-       Ajuda quando a página é compartilhada
+       FAVICON
+       ========================================================= -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="shortcut icon" href="favicon.svg" />
+
+    <!-- =========================================================
+       OPEN GRAPH
        ========================================================= -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Reforço de Matemática | Prof. Lúcio" />
     <meta
       property="og:description"
-      content="Aulas de reforço de matemática em Vespasiano e São José da Lapa, com turmas pequenas, separadas por série, revisão para provas e material incluso."
+      content="Turmas pequenas, separadas por série, revisão para provas, material incluso e condição especial para alunos da rede pública."
     />
     <meta
       property="og:url"
@@ -57,7 +64,7 @@
     <meta name="twitter:title" content="Reforço de Matemática | Prof. Lúcio" />
     <meta
       name="twitter:description"
-      content="Turmas pequenas, separadas por série, material incluso e revisão para provas."
+      content="Aulas de reforço de matemática com turmas de até 4 alunos, separadas por série."
     />
     <meta
       name="twitter:image"
@@ -65,8 +72,7 @@
     />
 
     <!-- =========================================================
-       DADOS ESTRUTURADOS (SEO MAIS FORTE)
-       Isso ajuda o Google a entender melhor o serviço
+       DADOS ESTRUTURADOS
        ========================================================= -->
     <script type="application/ld+json">
       {
@@ -77,48 +83,52 @@
         "image": "https://appsoft-lucio.github.io/reforco-matematico/img/foto-perfil.jpg",
         "description": "Reforço de matemática para alunos do 6º ano do Ensino Fundamental ao 3º ano do Ensino Médio em Vespasiano e São José da Lapa.",
         "telephone": "+55 31 98304-4087",
-        "areaServed": ["Vespasiano", "São José da Lapa", "Minas Gerais"],
-        "sameAs": ["https://appsoft-lucio.github.io/reforco-matematico/"]
+        "areaServed": ["Vespasiano", "São José da Lapa", "Minas Gerais"]
       }
     </script>
 
     <!-- =========================================================
-       CSS DA PÁGINA
+       CSS
+       Organizado por blocos para facilitar manutenção
        ========================================================= -->
     <style>
       /* =========================================================
-       VARIÁVEIS DE CORES E ESTILO
-       Facilita manutenção futura
+       1. VARIÁVEIS GLOBAIS
        ========================================================= */
       :root {
         --azul: #0f4c81;
         --azul-escuro: #08263f;
         --azul-claro: #1f6fb2;
         --amarelo: #ffbf00;
+        --amarelo-claro: #fff7cc;
+        --amarelo-claro-2: #fff3b0;
+        --amarelo-borda: #f0c84b;
         --branco: #ffffff;
         --cinza: #f3f6fb;
+        --cinza-texto: #4b5563;
         --texto: #1f2937;
         --texto-claro: #dbe7f3;
         --verde: #25d366;
         --verde-escuro: #1faa52;
         --sombra: 0 18px 45px rgba(0, 0, 0, 0.16);
+        --sombra-leve: 0 10px 25px rgba(0, 0, 0, 0.08);
         --borda: 1px solid rgba(255, 255, 255, 0.14);
         --radius: 24px;
       }
 
-      /* Reset básico */
+      /* =========================================================
+       2. RESET E BASE
+       ========================================================= */
       * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
 
-      /* Rolagem suave nativa */
       html {
         scroll-behavior: smooth;
       }
 
-      /* Compensa o header fixo ao clicar no menu */
       section {
         scroll-margin-top: 95px;
       }
@@ -139,16 +149,15 @@
         display: block;
       }
 
-      /* Container principal */
       .container {
         width: min(1150px, 92%);
         margin: 0 auto;
       }
 
       /* =========================================================
-       HEADER / MENU
+       3. HEADER E MENU
        ========================================================= */
-      header {
+      .site-header {
         position: sticky;
         top: 0;
         z-index: 100;
@@ -212,7 +221,7 @@
       }
 
       /* =========================================================
-       BOTÕES
+       4. BOTÕES
        ========================================================= */
       .btn {
         display: inline-flex;
@@ -254,7 +263,7 @@
       }
 
       /* =========================================================
-       HERO / TOPO DA PÁGINA
+       5. HERO
        ========================================================= */
       .hero {
         position: relative;
@@ -389,8 +398,8 @@
         object-fit: cover;
       }
 
-      .teacher-card h3,
-      .hero-panel h3 {
+      .teacher-card h2,
+      .hero-panel h2 {
         margin-bottom: 8px;
         font-size: 1.25rem;
       }
@@ -415,7 +424,43 @@
       }
 
       /* =========================================================
-       SEÇÕES GENÉRICAS
+       6. BLOCO DE PROMOÇÃO NO TOPO
+       Melhor contraste e leitura
+       ========================================================= */
+      .promo-top {
+        max-width: 620px;
+        margin-bottom: 26px;
+        padding: 20px;
+        border-radius: 20px;
+        background: linear-gradient(
+          135deg,
+          var(--amarelo-claro),
+          var(--amarelo-claro-2)
+        );
+        border: 2px solid var(--amarelo-borda);
+        box-shadow: var(--sombra-leve);
+      }
+
+      .promo-top h2 {
+        font-size: 1.35rem;
+        margin-bottom: 8px;
+        color: var(--azul-escuro);
+      }
+
+      .promo-top p {
+        color: var(--texto);
+        margin-bottom: 10px;
+        font-size: 1rem;
+        max-width: none;
+      }
+
+      .promo-top .promo-note {
+        color: var(--cinza-texto);
+        margin-bottom: 14px;
+      }
+
+      /* =========================================================
+       7. SEÇÕES
        ========================================================= */
       .section {
         padding: 82px 0;
@@ -432,7 +477,7 @@
         text-align: center;
         max-width: 760px;
         margin: 0 auto 42px;
-        color: #4b5563;
+        color: var(--cinza-texto);
         font-size: 1.02rem;
       }
 
@@ -465,7 +510,7 @@
       }
 
       .card p {
-        color: #4b5563;
+        color: var(--cinza-texto);
       }
 
       .card-icon {
@@ -499,7 +544,7 @@
       }
 
       /* =========================================================
-       BLOCO DE PREÇO / MENSALIDADE
+       8. MENSALIDADE
        ========================================================= */
       .pricing {
         background: linear-gradient(135deg, #e8f2fc, #f8fbff);
@@ -540,12 +585,12 @@
 
       .price small {
         font-size: 1rem;
-        color: #4b5563;
+        color: var(--cinza-texto);
         font-weight: 600;
       }
 
       .price-note {
-        color: #4b5563;
+        color: var(--cinza-texto);
         margin-bottom: 18px;
       }
 
@@ -568,13 +613,43 @@
         color: #374151;
       }
 
+      .promo-box {
+        margin-top: 20px;
+        padding: 20px;
+        border-radius: 20px;
+        background: linear-gradient(
+          135deg,
+          var(--amarelo-claro),
+          var(--amarelo-claro-2)
+        );
+        border: 2px solid var(--amarelo-borda);
+        box-shadow: 0 10px 25px rgba(255, 191, 0, 0.18);
+        text-align: center;
+      }
+
+      .promo-box h3 {
+        color: var(--azul-escuro);
+        margin-bottom: 10px;
+      }
+
+      .promo-box p {
+        color: var(--texto);
+      }
+
+      .promo-box .promo-valor {
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: var(--azul-escuro);
+        margin: 10px 0;
+      }
+
       .cta-middle {
         text-align: center;
         margin-top: 30px;
       }
 
       /* =========================================================
-       FAIXA DE CHAMADA PARA AÇÃO
+       9. CTA FINAL
        ========================================================= */
       .cta-strip {
         background: linear-gradient(135deg, var(--azul-escuro), var(--azul));
@@ -594,7 +669,7 @@
       }
 
       /* =========================================================
-       FAQ
+       10. FAQ
        ========================================================= */
       .faq {
         display: grid;
@@ -624,7 +699,7 @@
 
       details p {
         margin-top: 12px;
-        color: #4b5563;
+        color: var(--cinza-texto);
       }
 
       .frase-final {
@@ -635,9 +710,9 @@
       }
 
       /* =========================================================
-       RODAPÉ
+       11. RODAPÉ
        ========================================================= */
-      footer {
+      .site-footer {
         background: #071d31;
         color: var(--branco);
         padding: 46px 0;
@@ -657,8 +732,9 @@
         padding: 24px;
       }
 
-      .footer-card h3 {
+      .footer-card h2 {
         margin-bottom: 10px;
+        font-size: 1.4rem;
       }
 
       .footer-card p,
@@ -673,7 +749,9 @@
         margin-top: 10px;
       }
 
-      /* Botão flutuante do WhatsApp */
+      /* =========================================================
+       12. BOTÃO FLUTUANTE
+       ========================================================= */
       .floating-whatsapp {
         position: fixed;
         right: 18px;
@@ -690,7 +768,9 @@
         z-index: 200;
       }
 
-      /* Animação de entrada */
+      /* =========================================================
+       13. ANIMAÇÃO
+       ========================================================= */
       .fade-up {
         opacity: 0;
         transform: translateY(24px);
@@ -705,7 +785,7 @@
       }
 
       /* =========================================================
-       RESPONSIVIDADE
+       14. RESPONSIVIDADE
        ========================================================= */
       @media (max-width: 980px) {
         .hero-grid,
@@ -752,10 +832,7 @@
     </style>
   </head>
   <body>
-    <!-- =========================================================
-       HEADER / MENU PRINCIPAL
-       ========================================================= -->
-    <header>
+    <header class="site-header">
       <div class="container nav">
         <div class="brand">
           <div class="brand-badge">∑</div>
@@ -783,15 +860,7 @@
       </div>
     </header>
 
-    <!-- =========================================================
-       MAIN
-       Todo o conteúdo principal da página fica aqui.
-       Isso melhora semântica, acessibilidade e SEO.
-       ========================================================= -->
     <main>
-      <!-- =========================================================
-         HERO
-         ========================================================= -->
       <section class="hero" aria-labelledby="titulo-principal">
         <div class="container hero-grid">
           <div class="fade-up">
@@ -829,22 +898,18 @@
             </div>
 
             <article
-              class="promo-box fade-up"
+              class="promo-top fade-up"
               aria-labelledby="titulo-condicao-especial"
-              style="max-width: 620px; margin-bottom: 26px"
             >
-              <h2
-                id="titulo-condicao-especial"
-                style="font-size: 1.35rem; margin-bottom: 8px; color: #0f4c81"
-              >
+              <h2 id="titulo-condicao-especial">
                 🎓 Condição especial para alunos da rede pública
               </h2>
-              <p style="color: #1f2937; margin-bottom: 10px; font-size: 1rem">
+              <p>
                 Consulte a
                 <strong>condição especial com até 15% de desconto</strong> para
                 alunos da rede pública.
               </p>
-              <p style="color: #374151; margin-bottom: 14px">
+              <p class="promo-note">
                 Vagas limitadas. Clique abaixo para ver os detalhes da
                 mensalidade.
               </p>
@@ -905,9 +970,6 @@
         </div>
       </section>
 
-      <!-- =========================================================
-         SOBRE / COMO FUNCIONA
-         ========================================================= -->
       <section class="section" id="sobre" aria-labelledby="titulo-sobre">
         <div class="container">
           <h2 class="section-title fade-up" id="titulo-sobre">
@@ -965,9 +1027,6 @@
         </div>
       </section>
 
-      <!-- =========================================================
-         DIFERENCIAIS
-         ========================================================= -->
       <section
         class="section benefits"
         id="diferenciais"
@@ -1006,47 +1065,6 @@
         </div>
       </section>
 
-      <!-- =========================================================
-         RESULTADOS ESPERADOS
-         ========================================================= -->
-      <section class="section results" aria-labelledby="titulo-resultados">
-        <div class="container">
-          <h2 class="section-title fade-up" id="titulo-resultados">
-            Resultados esperados
-          </h2>
-
-          <div class="grid-3">
-            <article class="card fade-up">
-              <h3>Mais confiança</h3>
-              <p>
-                O aluno passa a entender melhor a matéria e perde o medo da
-                matemática.
-              </p>
-            </article>
-
-            <article class="card fade-up">
-              <h3>Melhor desempenho</h3>
-              <p>
-                Com acompanhamento e revisão, tende a melhorar em atividades,
-                trabalhos e provas.
-              </p>
-            </article>
-
-            <article class="card fade-up">
-              <h3>Mais organização</h3>
-              <p>
-                O aluno desenvolve rotina de estudo e mais segurança para
-                resolver exercícios.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- =========================================================
-         DEPOIMENTOS
-         Use apenas depoimentos reais. Estes blocos são modelos de layout.
-         ========================================================= -->
       <section
         class="section benefits"
         id="resultados-responsaveis"
@@ -1091,9 +1109,6 @@
         </div>
       </section>
 
-      <!-- =========================================================
-         MENSALIDADE / VALOR
-         ========================================================= -->
       <section
         class="section pricing"
         id="valor"
@@ -1129,6 +1144,28 @@
               >
                 Solicitar informações
               </a>
+
+              <section class="promo-box" aria-labelledby="titulo-promocao">
+                <h3 id="titulo-promocao">🎓 Condição especial</h3>
+                <p>
+                  Alunos da <strong>rede pública</strong> têm acesso a uma
+                  condição diferenciada
+                </p>
+                <p class="promo-valor">Até 15% de desconto</p>
+                <p>
+                  ✔ Vagas limitadas<br />
+                  ✔ Consulte disponibilidade no WhatsApp
+                </p>
+                <br />
+                <a
+                  href="https://wa.me/5531983044087?text=Olá,%20quero%20saber%20sobre%20o%20desconto%20para%20alunos%20da%20rede%20pública"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-whatsapp"
+                >
+                  Quero saber do desconto
+                </a>
+              </section>
             </article>
 
             <aside
@@ -1180,9 +1217,6 @@
         </div>
       </section>
 
-      <!-- =========================================================
-         CHAMADA FINAL
-         ========================================================= -->
       <section class="section" aria-labelledby="titulo-cta-final">
         <div class="container">
           <div class="cta-strip fade-up">
@@ -1213,9 +1247,6 @@
         </div>
       </section>
 
-      <!-- =========================================================
-         FAQ
-         ========================================================= -->
       <section class="section" id="faq" aria-labelledby="titulo-faq">
         <div class="container">
           <h2 class="section-title fade-up" id="titulo-faq">
@@ -1264,10 +1295,7 @@
       </section>
     </main>
 
-    <!-- =========================================================
-       RODAPÉ
-       ========================================================= -->
-    <footer id="contato">
+    <footer class="site-footer" id="contato">
       <div class="container footer-grid">
         <section class="footer-card fade-up">
           <h2>Prof. Lúcio — Reforço de Matemática</h2>
@@ -1302,7 +1330,6 @@
       </div>
     </footer>
 
-    <!-- Botão flutuante do WhatsApp -->
     <a
       class="floating-whatsapp"
       href="https://wa.me/5531983044087?text=Olá,%20quero%20mais%20informações%20sobre%20o%20reforço%20de%20matemática."
@@ -1313,16 +1340,12 @@
       ✆
     </a>
 
-    <!-- =========================================================
-       JAVASCRIPT
-       ========================================================= -->
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const details = document.querySelectorAll("details");
         const links = document.querySelectorAll('a[href^="#"]');
         const animatedElements = document.querySelectorAll(".fade-up");
 
-        // FAQ: deixa apenas um aberto por vez
         details.forEach((item) => {
           item.addEventListener("toggle", () => {
             if (item.open) {
@@ -1333,7 +1356,6 @@
           });
         });
 
-        // Scroll suave ao clicar nos links internos
         links.forEach((link) => {
           link.addEventListener("click", function (e) {
             const targetSelector = this.getAttribute("href");
@@ -1351,7 +1373,6 @@
           });
         });
 
-        // Animação ao rolar a página
         const observer = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
