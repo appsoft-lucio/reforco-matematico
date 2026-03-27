@@ -15,8 +15,6 @@
     <title>
       Reforço de Matemática em Vespasiano e São José da Lapa | Prof. Lúcio
     </title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta
       name="description"
       content="Reforço de matemática para alunos do 6º ano do Ensino Fundamental ao 3º ano do Ensino Médio em Vespasiano e São José da Lapa. Turmas pequenas, separadas por série, revisão para provas e material incluso."
@@ -82,21 +80,6 @@
         "areaServed": ["Vespasiano", "São José da Lapa", "Minas Gerais"],
         "sameAs": ["https://appsoft-lucio.github.io/reforco-matematico/"]
       }
-    </script>
-
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-VWVXR110S4"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-VWVXR110S4");
     </script>
 
     <!-- =========================================================
@@ -782,17 +765,17 @@
           </div>
         </div>
 
-        <nav class="nav-links">
+        <nav class="nav-links" aria-label="Menu principal">
           <a href="#sobre">Sobre</a>
           <a href="#diferenciais">Diferenciais</a>
           <a href="#valor">Mensalidade</a>
           <a href="#faq">Dúvidas</a>
 
-          <!-- Botão principal do menu levando para o WhatsApp -->
           <a
             class="btn btn-primary"
             href="https://wa.me/5531983044087?text=Olá,%20vi%20o%20site%20e%20quero%20uma%20vaga%20no%20reforço%20de%20matemática"
             target="_blank"
+            rel="noopener noreferrer"
           >
             Quero garantir minha vaga
           </a>
@@ -801,389 +784,422 @@
     </header>
 
     <!-- =========================================================
-       HERO
+       MAIN
+       Todo o conteúdo principal da página fica aqui.
+       Isso melhora semântica, acessibilidade e SEO.
        ========================================================= -->
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="fade-up">
-          <div class="hero-badge">
-            📚 Matrículas abertas • Ensino Fundamental II e Médio
+    <main>
+      <!-- =========================================================
+         HERO
+         ========================================================= -->
+      <section class="hero" aria-labelledby="titulo-principal">
+        <div class="container hero-grid">
+          <div class="fade-up">
+            <p class="hero-badge">
+              📚 Matrículas abertas • Ensino Fundamental II e Médio
+            </p>
+
+            <h1 id="titulo-principal">
+              Reforço de Matemática em Vespasiano e São José da Lapa
+            </h1>
+
+            <p>
+              Aulas para alunos do
+              <strong
+                >6º ano do Ensino Fundamental ao 3º ano do Ensino Médio</strong
+              >, com explicação simples, revisão para provas, material de apoio
+              e acompanhamento individual.
+            </p>
+
+            <p class="urgencia">
+              ⚠️ Vagas limitadas – apenas 4 alunos por turma
+            </p>
+
+            <div class="hero-actions">
+              <a
+                class="btn btn-whatsapp"
+                href="https://wa.me/5531983044087?text=Olá,%20vi%20a%20página%20de%20reforço%20de%20matemática%20e%20quero%20mais%20informações."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Falar no WhatsApp
+              </a>
+
+              <a class="btn btn-outline" href="#valor">Ver mensalidade</a>
+            </div>
+
+            <div class="hero-info" aria-label="Informações rápidas do serviço">
+              <article class="info-box">
+                <strong>2x</strong>
+                aulas por semana
+              </article>
+              <article class="info-box">
+                <strong>1h</strong>
+                por aula
+              </article>
+              <article class="info-box">
+                <strong>4</strong>
+                alunos no máximo
+              </article>
+            </div>
           </div>
 
-          <!-- H1 é muito importante para SEO -->
-          <h1>Reforço de Matemática em Vespasiano e São José da Lapa</h1>
+          <aside
+            class="hero-side fade-up"
+            aria-label="Apresentação do professor e atendimento"
+          >
+            <article class="teacher-card">
+              <figure class="teacher-image">
+                <img
+                  src="img/foto-perfil.jpg"
+                  alt="Professor de matemática Lúcio"
+                />
+              </figure>
 
-          <p>
-            Aulas para alunos do
-            <strong
-              >6º ano do Ensino Fundamental ao 3º ano do Ensino Médio</strong
-            >, com explicação simples, revisão para provas, material de apoio e
-            acompanhamento individual.
+              <h2>Prof. Lúcio</h2>
+              <p>
+                Reforço escolar de matemática com foco em evolução real do
+                aluno, mais segurança para resolver exercícios e melhor
+                desempenho nas provas.
+              </p>
+
+              <ul class="hero-list">
+                <li>Turmas de até 4 alunos</li>
+                <li>Turmas separadas por série</li>
+                <li>Revisão para provas</li>
+                <li>Material incluso</li>
+              </ul>
+            </article>
+
+            <article class="hero-panel">
+              <h2>Atendimento em Vespasiano e São José da Lapa</h2>
+              <p>
+                Ambiente organizado, aulas planejadas e comunicação prática para
+                facilitar a rotina dos pais e dos alunos.
+              </p>
+            </article>
+          </aside>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         SOBRE / COMO FUNCIONA
+         ========================================================= -->
+      <section class="section" id="sobre" aria-labelledby="titulo-sobre">
+        <div class="container">
+          <h2 class="section-title fade-up" id="titulo-sobre">
+            Como funciona o reforço de matemática
+          </h2>
+          <p class="subtitle fade-up">
+            Um formato organizado para ajudar o aluno a entender matemática com
+            mais clareza, prática e confiança.
           </p>
 
-          <p class="urgencia">⚠️ Vagas limitadas – apenas 4 alunos por turma</p>
+          <div class="grid-3">
+            <article class="card fade-up">
+              <div class="card-icon" aria-hidden="true">🎯</div>
+              <h3>Público atendido</h3>
+              <ul class="lista">
+                <li>6º ao 9º ano do Ensino Fundamental</li>
+                <li>1º ao 3º ano do Ensino Médio</li>
+                <li>Alunos com dificuldade ou defasagem</li>
+              </ul>
+            </article>
 
-          <div class="hero-actions">
+            <article class="card fade-up">
+              <div class="card-icon" aria-hidden="true">🧮</div>
+              <h3>Formato das aulas</h3>
+              <ul class="lista">
+                <li>2 aulas por semana</li>
+                <li>1 hora por aula</li>
+                <li>Até 4 alunos por turma</li>
+                <li>Turmas separadas por série</li>
+                <li>Acompanhamento individual</li>
+              </ul>
+            </article>
+
+            <article class="card fade-up">
+              <div class="card-icon" aria-hidden="true">📈</div>
+              <h3>Objetivo do trabalho</h3>
+              <ul class="lista">
+                <li>Melhorar o entendimento do conteúdo</li>
+                <li>Dar mais segurança nas provas</li>
+                <li>Organizar melhor os estudos</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="cta-middle fade-up">
             <a
               class="btn btn-whatsapp"
-              href="https://wa.me/5531983044087?text=Olá,%20vi%20a%20página%20de%20reforço%20de%20matemática%20e%20quero%20mais%20informações."
+              href="https://wa.me/5531983044087?text=Olá,%20quero%20uma%20vaga%20no%20reforço%20de%20matemática"
               target="_blank"
+              rel="noopener noreferrer"
             >
-              Falar no WhatsApp
-            </a>
-
-            <a class="btn btn-outline" href="#valor">Ver mensalidade</a>
-          </div>
-
-          <div class="hero-info">
-            <div class="info-box">
-              <strong>2x</strong>
-              aulas por semana
-            </div>
-            <div class="info-box">
-              <strong>1h</strong>
-              por aula
-            </div>
-            <div class="info-box">
-              <strong>4</strong>
-              alunos no máximo
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-side fade-up">
-          <div class="teacher-card">
-            <div class="teacher-image">
-              <!-- Troque a imagem apenas se mudar o nome do arquivo -->
-              <img
-                src="img/foto-perfil.jpg"
-                alt="Professor de matemática Lúcio"
-              />
-            </div>
-
-            <h3>Prof. Lúcio</h3>
-            <p>
-              Reforço escolar de matemática com foco em evolução real do aluno,
-              mais segurança para resolver exercícios e melhor desempenho nas
-              provas.
-            </p>
-
-            <ul class="hero-list">
-              <li>Turmas de até 4 alunos</li>
-              <li>Turmas separadas por série</li>
-              <li>Revisão para provas</li>
-              <li>Material incluso</li>
-            </ul>
-          </div>
-
-          <div class="hero-panel">
-            <h3>Atendimento em Vespasiano e São José da Lapa</h3>
-            <p>
-              Ambiente organizado, aulas planejadas e comunicação prática para
-              facilitar a rotina dos pais e dos alunos.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================================================
-       SOBRE / COMO FUNCIONA
-       ========================================================= -->
-    <section class="section" id="sobre">
-      <div class="container">
-        <h2 class="section-title fade-up">
-          Como funciona o reforço de matemática
-        </h2>
-        <p class="subtitle fade-up">
-          Um formato organizado para ajudar o aluno a entender matemática com
-          mais clareza, prática e confiança.
-        </p>
-
-        <div class="grid-3">
-          <div class="card fade-up">
-            <div class="card-icon">🎯</div>
-            <h3>Público atendido</h3>
-            <ul class="lista">
-              <li>6º ao 9º ano do Ensino Fundamental</li>
-              <li>1º ao 3º ano do Ensino Médio</li>
-              <li>Alunos com dificuldade ou defasagem</li>
-            </ul>
-          </div>
-
-          <div class="card fade-up">
-            <div class="card-icon">🧮</div>
-            <h3>Formato das aulas</h3>
-            <ul class="lista">
-              <li>2 aulas por semana</li>
-              <li>1 hora por aula</li>
-              <li>Até 4 alunos por turma</li>
-              <li>Turmas separadas por série</li>
-              <li>Acompanhamento individual</li>
-            </ul>
-          </div>
-
-          <div class="card fade-up">
-            <div class="card-icon">📈</div>
-            <h3>Objetivo do trabalho</h3>
-            <ul class="lista">
-              <li>Melhorar o entendimento do conteúdo</li>
-              <li>Dar mais segurança nas provas</li>
-              <li>Organizar melhor os estudos</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- CTA intermediário para aumentar conversão -->
-        <div class="cta-middle fade-up">
-          <a
-            class="btn btn-whatsapp"
-            href="https://wa.me/5531983044087?text=Olá,%20quero%20uma%20vaga%20no%20reforço%20de%20matemática"
-            target="_blank"
-          >
-            Falar no WhatsApp agora
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================================================
-       DIFERENCIAIS
-       ========================================================= -->
-    <section class="section benefits" id="diferenciais">
-      <div class="container">
-        <h2 class="section-title fade-up">Diferenciais do reforço escolar</h2>
-        <p class="subtitle fade-up">
-          Mais que uma aula comum, é um acompanhamento pensado para melhorar o
-          desempenho escolar.
-        </p>
-
-        <div class="grid-2">
-          <div class="card fade-up">
-            <h3>O que está incluído</h3>
-            <ul class="lista">
-              <li>Explicação simples e prática</li>
-              <li>Listas de exercícios</li>
-              <li>Revisão antes das provas</li>
-              <li>Material de apoio incluso</li>
-            </ul>
-          </div>
-
-          <div class="card fade-up">
-            <h3>Mais organização e qualidade</h3>
-            <ul class="lista">
-              <li>Turmas pequenas (máx. 4 alunos)</li>
-              <li>Turmas organizadas por série</li>
-              <li>Acompanhamento individual</li>
-              <li>Relatório de desempenho do aluno</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================================================
-       RESULTADOS ESPERADOS
-       ========================================================= -->
-    <section class="section results">
-      <div class="container">
-        <h2 class="section-title fade-up">Resultados esperados</h2>
-
-        <div class="grid-3">
-          <div class="card fade-up">
-            <h3>✔ Mais confiança</h3>
-            <p>
-              O aluno passa a entender melhor a matéria e perde o medo da
-              matemática.
-            </p>
-          </div>
-
-          <div class="card fade-up">
-            <h3>✔ Melhor desempenho</h3>
-            <p>
-              Com acompanhamento e revisão, tende a melhorar em atividades,
-              trabalhos e provas.
-            </p>
-          </div>
-
-          <div class="card fade-up">
-            <h3>✔ Mais organização</h3>
-            <p>
-              O aluno desenvolve rotina de estudo e mais segurança para resolver
-              exercícios.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================================================
-       MENSALIDADE / VALOR
-       ========================================================= -->
-    <section class="section pricing" id="valor">
-      <div class="container">
-        <h2 class="section-title fade-up">Mensalidade</h2>
-        <p class="subtitle fade-up">
-          Valor pensado para oferecer qualidade, acompanhamento e uma proposta
-          acessível para a região.
-        </p>
-
-        <div class="price-wrap">
-          <div class="price-box fade-up">
-            <span class="price-badge">Plano mensal</span>
-            <p>Reforço de matemática com aulas regulares</p>
-            <div class="price">R$ 300 <small>/ mês</small></div>
-            <p class="price-note">2 aulas por semana • 1 hora cada</p>
-
-            <ul class="lista" style="margin-bottom: 22px">
-              <li>Turmas de até 4 alunos</li>
-              <li>Separadas por série</li>
-              <li>Material incluso</li>
-              <li>Revisão para provas</li>
-              <li>Relatório de desempenho</li>
-            </ul>
-
-            <a
-              class="btn btn-whatsapp"
-              href="https://wa.me/5531983044087?text=Olá,%20quero%20saber%20mais%20sobre%20as%20aulas%20de%20reforço%20de%20matemática."
-              target="_blank"
-            >
-              Solicitar informações
-            </a>
-          </div>
-
-          <div class="price-side fade-up">
-            <h3
-              style="
-                margin-bottom: 10px;
-                color: var(--azul-escuro);
-                font-size: 1.5rem;
-              "
-            >
-              Formato das turmas
-            </h3>
-            <p style="color: #4b5563; margin-bottom: 16px">
-              As aulas são organizadas por série para manter o conteúdo mais
-              alinhado e o acompanhamento mais eficiente.
-            </p>
-
-            <div class="schedule-box">
-              <h4>Formato das aulas</h4>
-              <div class="schedule-list">
-                <div>• Turmas de até 4 alunos</div>
-                <div>• Separadas por série</div>
-                <div>• Acompanhamento individual</div>
-              </div>
-            </div>
-
-            <div class="schedule-box">
-              <h4>Atendimento</h4>
-              <div class="schedule-list">
-                <div>• Vespasiano</div>
-                <div>• São José da Lapa</div>
-                <div>• Contato rápido por WhatsApp</div>
-              </div>
-            </div>
-
-            <div class="schedule-box">
-              <h4>Ideal para quem busca</h4>
-              <div class="schedule-list">
-                <div>• melhorar nas provas</div>
-                <div>• recuperar conteúdo atrasado</div>
-                <div>• estudar com mais organização</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =========================================================
-       CHAMADA FINAL
-       ========================================================= -->
-    <section class="section">
-      <div class="container">
-        <div class="cta-strip fade-up">
-          <div>
-            <h2
-              style="font-size: clamp(1.8rem, 3vw, 2.4rem); line-height: 1.15"
-            >
-              Garanta a vaga antes que as turmas fechem
-            </h2>
-            <p>
-              Como as turmas são pequenas e separadas por série, a quantidade de
-              vagas é limitada.
-            </p>
-          </div>
-
-          <div>
-            <a
-              class="btn btn-primary"
-              href="https://wa.me/5531983044087?text=Olá,%20tenho%20interesse%20no%20reforço%20de%20matemática.%20Pode%20me%20explicar%20como%20funciona?"
-              target="_blank"
-            >
-              Quero garantir minha vaga
+              Falar no WhatsApp agora
             </a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- =========================================================
-       FAQ
-       ========================================================= -->
-    <section class="section" id="faq">
-      <div class="container">
-        <h2 class="section-title fade-up">Perguntas frequentes</h2>
+      <!-- =========================================================
+         DIFERENCIAIS
+         ========================================================= -->
+      <section
+        class="section benefits"
+        id="diferenciais"
+        aria-labelledby="titulo-diferenciais"
+      >
+        <div class="container">
+          <h2 class="section-title fade-up" id="titulo-diferenciais">
+            Diferenciais do reforço escolar
+          </h2>
+          <p class="subtitle fade-up">
+            Mais que uma aula comum, é um acompanhamento pensado para melhorar o
+            desempenho escolar.
+          </p>
 
-        <div class="faq">
-          <details class="fade-up">
-            <summary>As aulas são em grupo ou individuais?</summary>
-            <p>
-              As aulas são em turmas pequenas, com no máximo 4 alunos,
-              organizadas por série, permitindo acompanhamento individual
-              durante a aula.
-            </p>
-          </details>
+          <div class="grid-2">
+            <article class="card fade-up">
+              <h3>O que está incluído</h3>
+              <ul class="lista">
+                <li>Explicação simples e prática</li>
+                <li>Listas de exercícios</li>
+                <li>Revisão antes das provas</li>
+                <li>Material de apoio incluso</li>
+              </ul>
+            </article>
 
-          <details class="fade-up">
-            <summary>Tem revisão para provas?</summary>
-            <p>
-              Sim. O aluno recebe revisão específica antes das provas, com foco
-              nos conteúdos que mais geram dificuldade.
-            </p>
-          </details>
-
-          <details class="fade-up">
-            <summary>O material está incluso?</summary>
-            <p>
-              Sim. O material de apoio e as listas de exercícios já fazem parte
-              do acompanhamento.
-            </p>
-          </details>
-
-          <details class="fade-up">
-            <summary>Como faço para matricular?</summary>
-            <p>
-              Basta entrar em contato pelo WhatsApp para verificar horários,
-              disponibilidade e vaga na turma adequada.
-            </p>
-          </details>
+            <article class="card fade-up">
+              <h3>Mais organização e qualidade</h3>
+              <ul class="lista">
+                <li>Turmas pequenas (máx. 4 alunos)</li>
+                <li>Turmas organizadas por série</li>
+                <li>Acompanhamento individual</li>
+                <li>Relatório de desempenho do aluno</li>
+              </ul>
+            </article>
+          </div>
         </div>
+      </section>
 
-        <h2 class="frase-final fade-up">
-          Garanta a vaga antes que as turmas fechem
-        </h2>
-      </div>
-    </section>
+      <!-- =========================================================
+         RESULTADOS ESPERADOS
+         ========================================================= -->
+      <section class="section results" aria-labelledby="titulo-resultados">
+        <div class="container">
+          <h2 class="section-title fade-up" id="titulo-resultados">
+            Resultados esperados
+          </h2>
+
+          <div class="grid-3">
+            <article class="card fade-up">
+              <h3>Mais confiança</h3>
+              <p>
+                O aluno passa a entender melhor a matéria e perde o medo da
+                matemática.
+              </p>
+            </article>
+
+            <article class="card fade-up">
+              <h3>Melhor desempenho</h3>
+              <p>
+                Com acompanhamento e revisão, tende a melhorar em atividades,
+                trabalhos e provas.
+              </p>
+            </article>
+
+            <article class="card fade-up">
+              <h3>Mais organização</h3>
+              <p>
+                O aluno desenvolve rotina de estudo e mais segurança para
+                resolver exercícios.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         MENSALIDADE / VALOR
+         ========================================================= -->
+      <section
+        class="section pricing"
+        id="valor"
+        aria-labelledby="titulo-valor"
+      >
+        <div class="container">
+          <h2 class="section-title fade-up" id="titulo-valor">Mensalidade</h2>
+          <p class="subtitle fade-up">
+            Valor pensado para oferecer qualidade, acompanhamento e uma proposta
+            acessível para a região.
+          </p>
+
+          <div class="price-wrap">
+            <article class="price-box fade-up">
+              <span class="price-badge">Plano mensal</span>
+              <p>Reforço de matemática com aulas regulares</p>
+              <div class="price">R$ 300 <small>/ mês</small></div>
+              <p class="price-note">2 aulas por semana • 1 hora cada</p>
+
+              <ul class="lista" style="margin-bottom: 22px">
+                <li>Turmas de até 4 alunos</li>
+                <li>Separadas por série</li>
+                <li>Material incluso</li>
+                <li>Revisão para provas</li>
+                <li>Relatório de desempenho</li>
+              </ul>
+
+              <a
+                class="btn btn-whatsapp"
+                href="https://wa.me/5531983044087?text=Olá,%20quero%20saber%20mais%20sobre%20as%20aulas%20de%20reforço%20de%20matemática."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Solicitar informações
+              </a>
+            </article>
+
+            <aside
+              class="price-side fade-up"
+              aria-label="Informações complementares sobre o formato das aulas"
+            >
+              <h3
+                style="
+                  margin-bottom: 10px;
+                  color: var(--azul-escuro);
+                  font-size: 1.5rem;
+                "
+              >
+                Formato das turmas
+              </h3>
+              <p style="color: #4b5563; margin-bottom: 16px">
+                As aulas são organizadas por série para manter o conteúdo mais
+                alinhado e o acompanhamento mais eficiente.
+              </p>
+
+              <div class="schedule-box">
+                <h4>Formato das aulas</h4>
+                <div class="schedule-list">
+                  <div>• Turmas de até 4 alunos</div>
+                  <div>• Separadas por série</div>
+                  <div>• Acompanhamento individual</div>
+                </div>
+              </div>
+
+              <div class="schedule-box">
+                <h4>Atendimento</h4>
+                <div class="schedule-list">
+                  <div>• Vespasiano</div>
+                  <div>• São José da Lapa</div>
+                  <div>• Contato rápido por WhatsApp</div>
+                </div>
+              </div>
+
+              <div class="schedule-box">
+                <h4>Ideal para quem busca</h4>
+                <div class="schedule-list">
+                  <div>• melhorar nas provas</div>
+                  <div>• recuperar conteúdo atrasado</div>
+                  <div>• estudar com mais organização</div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         CHAMADA FINAL
+         ========================================================= -->
+      <section class="section" aria-labelledby="titulo-cta-final">
+        <div class="container">
+          <div class="cta-strip fade-up">
+            <div>
+              <h2
+                id="titulo-cta-final"
+                style="font-size: clamp(1.8rem, 3vw, 2.4rem); line-height: 1.15"
+              >
+                Garanta a vaga antes que as turmas fechem
+              </h2>
+              <p>
+                Como as turmas são pequenas e separadas por série, a quantidade
+                de vagas é limitada.
+              </p>
+            </div>
+
+            <div>
+              <a
+                class="btn btn-primary"
+                href="https://wa.me/5531983044087?text=Olá,%20tenho%20interesse%20no%20reforço%20de%20matemática.%20Pode%20me%20explicar%20como%20funciona?"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Quero garantir minha vaga
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =========================================================
+         FAQ
+         ========================================================= -->
+      <section class="section" id="faq" aria-labelledby="titulo-faq">
+        <div class="container">
+          <h2 class="section-title fade-up" id="titulo-faq">
+            Perguntas frequentes
+          </h2>
+
+          <div class="faq">
+            <details class="fade-up">
+              <summary>As aulas são em grupo ou individuais?</summary>
+              <p>
+                As aulas são em turmas pequenas, com no máximo 4 alunos,
+                organizadas por série, permitindo acompanhamento individual
+                durante a aula.
+              </p>
+            </details>
+
+            <details class="fade-up">
+              <summary>Tem revisão para provas?</summary>
+              <p>
+                Sim. O aluno recebe revisão específica antes das provas, com
+                foco nos conteúdos que mais geram dificuldade.
+              </p>
+            </details>
+
+            <details class="fade-up">
+              <summary>O material está incluso?</summary>
+              <p>
+                Sim. O material de apoio e as listas de exercícios já fazem
+                parte do acompanhamento.
+              </p>
+            </details>
+
+            <details class="fade-up">
+              <summary>Como faço para matricular?</summary>
+              <p>
+                Basta entrar em contato pelo WhatsApp para verificar horários,
+                disponibilidade e vaga na turma adequada.
+              </p>
+            </details>
+          </div>
+
+          <p class="frase-final fade-up">
+            Garanta a vaga antes que as turmas fechem
+          </p>
+        </div>
+      </section>
+    </main>
 
     <!-- =========================================================
        RODAPÉ
        ========================================================= -->
     <footer id="contato">
       <div class="container footer-grid">
-        <div class="footer-card fade-up">
-          <h3>Prof. Lúcio — Reforço de Matemática</h3>
+        <section class="footer-card fade-up">
+          <h2>Prof. Lúcio — Reforço de Matemática</h2>
           <p>
             Reforço escolar com foco em alunos do Ensino Fundamental II e Ensino
             Médio, com organização, clareza e acompanhamento.
@@ -1194,10 +1210,10 @@
             <li>📞 WhatsApp: 31 98304-4087</li>
             <li>📚 Do 6º ano ao 3º ano do Ensino Médio</li>
           </ul>
-        </div>
+        </section>
 
-        <div class="footer-card fade-up">
-          <h3>Fale agora</h3>
+        <section class="footer-card fade-up">
+          <h2>Fale agora</h2>
           <p>
             Entre em contato para tirar dúvidas, verificar horários e solicitar
             uma vaga.
@@ -1207,10 +1223,11 @@
             class="btn btn-whatsapp"
             href="https://wa.me/5531983044087?text=Olá,%20quero%20matricular%20um%20aluno%20no%20reforço%20de%20matemática."
             target="_blank"
+            rel="noopener noreferrer"
           >
             Chamar no WhatsApp
           </a>
-        </div>
+        </section>
       </div>
     </footer>
 
@@ -1219,6 +1236,7 @@
       class="floating-whatsapp"
       href="https://wa.me/5531983044087?text=Olá,%20quero%20mais%20informações%20sobre%20o%20reforço%20de%20matemática."
       target="_blank"
+      rel="noopener noreferrer"
       aria-label="Falar no WhatsApp"
     >
       ✆
@@ -1229,11 +1247,11 @@
        ========================================================= -->
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        // ---------------------------------------------------------
-        // 1. FAQ: abre um item por vez
-        // ---------------------------------------------------------
         const details = document.querySelectorAll("details");
+        const links = document.querySelectorAll('a[href^="#"]');
+        const animatedElements = document.querySelectorAll(".fade-up");
 
+        // FAQ: deixa apenas um aberto por vez
         details.forEach((item) => {
           item.addEventListener("toggle", () => {
             if (item.open) {
@@ -1244,11 +1262,7 @@
           });
         });
 
-        // ---------------------------------------------------------
-        // 2. Scroll suave ao clicar no menu interno
-        // ---------------------------------------------------------
-        const links = document.querySelectorAll('a[href^="#"]');
-
+        // Scroll suave ao clicar nos links internos
         links.forEach((link) => {
           link.addEventListener("click", function (e) {
             const targetSelector = this.getAttribute("href");
@@ -1266,11 +1280,7 @@
           });
         });
 
-        // ---------------------------------------------------------
-        // 3. Animação ao rolar a página
-        // ---------------------------------------------------------
-        const animatedElements = document.querySelectorAll(".fade-up");
-
+        // Animação ao rolar a página
         const observer = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
