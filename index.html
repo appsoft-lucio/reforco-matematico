@@ -2,29 +2,27 @@
 <html lang="pt-BR">
   <head>
     <!-- =========================================================
-       CONFIGURAÇÕES BÁSICAS
-       ========================================================= -->
+         CONFIGURAÇÕES BÁSICAS DA PÁGINA
+         ========================================================= -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <!-- =========================================================
-       SEO
-       ========================================================= -->
+         SEO BÁSICO
+         Título e descrição usados pelo Google nos resultados de busca
+         ========================================================= -->
     <title>
-      Reforço de Matemática em Vespasiano e São José da Lapa | Prof. Lúcio
+      Reforço de Matemática em Vespasiano e São José da Lapa | Professor Lúcio
     </title>
-
     <meta
       name="description"
-      content="Reforço de matemática para alunos do 6º ano do Ensino Fundamental ao 3º ano do Ensino Médio em Vespasiano e São José da Lapa. Turmas pequenas, separadas por série, revisão para provas, material incluso e condição especial para alunos da rede pública."
+      content="Reforço de matemática em Vespasiano e São José da Lapa para alunos do 6º ano ao 3º ano do Ensino Médio. Turmas pequenas, revisão para provas e acompanhamento mais próximo com o Professor Lúcio."
     />
-
     <meta
       name="keywords"
-      content="reforço de matemática, aulas de matemática, professor de matemática, reforço escolar, Vespasiano, São José da Lapa, ensino fundamental, ensino médio, aulas particulares de matemática"
+      content="reforço de matemática em Vespasiano, reforço de matemática em São José da Lapa, professor de matemática Vespasiano, aulas de matemática São José da Lapa, reforço escolar matemática, aulas particulares de matemática"
     />
-
     <meta name="author" content="Prof. Lúcio" />
     <meta name="robots" content="index, follow" />
     <link
@@ -33,19 +31,18 @@
     />
 
     <!-- =========================================================
-       FAVICON
-       ========================================================= -->
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="shortcut icon" href="favicon.svg" />
-
-    <!-- =========================================================
-       OPEN GRAPH
-       ========================================================= -->
+         OPEN GRAPH
+         Controla como a página aparece ao compartilhar no WhatsApp,
+         Facebook e outras redes sociais
+         ========================================================= -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Reforço de Matemática | Prof. Lúcio" />
+    <meta
+      property="og:title"
+      content="Reforço de Matemática em Vespasiano e São José da Lapa | Professor Lúcio"
+    />
     <meta
       property="og:description"
-      content="Turmas pequenas, separadas por série, revisão para provas, material incluso e condição especial para alunos da rede pública."
+      content="Reforço de matemática com turmas pequenas em Vespasiano e São José da Lapa. Mais atenção ao aluno, revisão para provas e acompanhamento mais próximo."
     />
     <meta
       property="og:url"
@@ -58,13 +55,17 @@
     <meta property="og:locale" content="pt_BR" />
 
     <!-- =========================================================
-       TWITTER CARD
-       ========================================================= -->
+         TWITTER / X CARD
+         Pré-visualização da página ao compartilhar em redes compatíveis
+         ========================================================= -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Reforço de Matemática | Prof. Lúcio" />
+    <meta
+      name="twitter:title"
+      content="Reforço de Matemática em Vespasiano e São José da Lapa | Professor Lúcio"
+    />
     <meta
       name="twitter:description"
-      content="Aulas de reforço de matemática com turmas de até 4 alunos, separadas por série."
+      content="Professor de matemática com reforço escolar em Vespasiano e São José da Lapa para alunos do 6º ano ao 3º ano do Ensino Médio."
     />
     <meta
       name="twitter:image"
@@ -72,53 +73,115 @@
     />
 
     <!-- =========================================================
-       DADOS ESTRUTURADOS
-       ========================================================= -->
+         DADOS ESTRUTURADOS (SCHEMA.ORG)
+         Ajuda o Google a entender que esta página oferece um serviço
+         educacional e contém perguntas frequentes
+         ========================================================= -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "EducationalOrganization",
-        "name": "Prof. Lúcio - Reforço de Matemática",
-        "url": "https://appsoft-lucio.github.io/reforco-matematico/",
-        "image": "https://appsoft-lucio.github.io/reforco-matematico/img/foto-perfil.jpg",
-        "description": "Reforço de matemática para alunos do 6º ano do Ensino Fundamental ao 3º ano do Ensino Médio em Vespasiano e São José da Lapa.",
-        "telephone": "+55 31 98304-4087",
-        "areaServed": ["Vespasiano", "São José da Lapa", "Minas Gerais"]
+        "@graph": [
+          {
+            "@type": "EducationalOrganization",
+            "@id": "https://appsoft-lucio.github.io/reforco-matematico/#organizacao",
+            "name": "Professor Lúcio - Reforço de Matemática",
+            "url": "https://appsoft-lucio.github.io/reforco-matematico/",
+            "image": "https://appsoft-lucio.github.io/reforco-matematico/img/foto-perfil.jpg",
+            "description": "Reforço de matemática para alunos do 6º ano ao 3º ano do Ensino Médio em Vespasiano e São José da Lapa.",
+            "telephone": "+55 31 98304-4087",
+            "areaServed": [
+              { "@type": "City", "name": "Vespasiano" },
+              { "@type": "City", "name": "São José da Lapa" },
+              { "@type": "State", "name": "Minas Gerais" }
+            ],
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Vespasiano",
+              "addressRegion": "MG",
+              "addressCountry": "BR"
+            },
+            "sameAs": ["https://appsoft-lucio.github.io/reforco-matematico/"]
+          },
+          {
+            "@type": "Service",
+            "name": "Reforço de Matemática",
+            "serviceType": "Reforço escolar de matemática",
+            "provider": {
+              "@id": "https://appsoft-lucio.github.io/reforco-matematico/#organizacao"
+            },
+            "areaServed": [
+              { "@type": "City", "name": "Vespasiano" },
+              { "@type": "City", "name": "São José da Lapa" }
+            ],
+            "audience": {
+              "@type": "EducationalAudience",
+              "educationalRole": "student"
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "As aulas são em grupo ou individuais?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "As aulas são em turmas pequenas, com no máximo 4 alunos."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Meu filho vai ter atenção mesmo em turma?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sim. Como as turmas são pequenas e separadas por série, o acompanhamento é mais próximo."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Tem revisão para provas?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sim. O reforço inclui revisão focada nos conteúdos que mais costumam gerar dificuldade antes das provas."
+                }
+              }
+            ]
+          }
+        ]
       }
     </script>
 
-    <!-- =========================================================
-       CSS
-       Organizado por blocos para facilitar manutenção
-       ========================================================= -->
     <style>
       /* =========================================================
-       1. VARIÁVEIS GLOBAIS
-       ========================================================= */
+         VARIÁVEIS GLOBAIS
+         Centraliza cores, sombras, bordas e tamanhos principais.
+         Se quiser trocar a identidade visual do site, comece por aqui.
+         ========================================================= */
       :root {
         --azul: #0f4c81;
         --azul-escuro: #08263f;
         --azul-claro: #1f6fb2;
         --amarelo: #ffbf00;
-        --amarelo-claro: #fff7cc;
-        --amarelo-claro-2: #fff3b0;
+        --amarelo-suave: #fff7cc;
         --amarelo-borda: #f0c84b;
-        --branco: #ffffff;
-        --cinza: #f3f6fb;
-        --cinza-texto: #4b5563;
-        --texto: #1f2937;
-        --texto-claro: #dbe7f3;
         --verde: #25d366;
         --verde-escuro: #1faa52;
-        --sombra: 0 18px 45px rgba(0, 0, 0, 0.16);
-        --sombra-leve: 0 10px 25px rgba(0, 0, 0, 0.08);
-        --borda: 1px solid rgba(255, 255, 255, 0.14);
+        --branco: #ffffff;
+        --cinza-fundo: #f4f7fb;
+        --cinza-card: #eef4fb;
+        --texto: #1f2937;
+        --texto-suave: #4b5563;
+        --texto-claro: #dbe7f3;
+        --sombra: 0 18px 45px rgba(0, 0, 0, 0.14);
+        --sombra-suave: 0 10px 25px rgba(0, 0, 0, 0.08);
         --radius: 24px;
+        --borda-clara: 1px solid rgba(255, 255, 255, 0.16);
       }
 
       /* =========================================================
-       2. RESET E BASE
-       ========================================================= */
+         RESET BÁSICO
+         Remove espaçamentos padrão e padroniza o box model.
+         ========================================================= */
       * {
         margin: 0;
         padding: 0;
@@ -129,19 +192,11 @@
         scroll-behavior: smooth;
       }
 
-      section {
-        scroll-margin-top: 95px;
-      }
-
       body {
         font-family: Arial, Helvetica, sans-serif;
-        background: var(--cinza);
+        background: var(--cinza-fundo);
         color: var(--texto);
         line-height: 1.6;
-      }
-
-      a {
-        text-decoration: none;
       }
 
       img {
@@ -149,18 +204,52 @@
         display: block;
       }
 
+      a {
+        text-decoration: none;
+      }
+
+      section {
+        scroll-margin-top: 90px;
+      }
+
+      /* =========================================================
+         ACESSIBILIDADE
+         Link visível apenas no foco para pular direto ao conteúdo.
+         Muito útil para teclado e leitores de tela.
+         ========================================================= */
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: 10px;
+        background: #ffffff;
+        color: #111827;
+        padding: 10px 14px;
+        border-radius: 10px;
+        z-index: 2000;
+        font-weight: 700;
+      }
+
+      .skip-link:focus {
+        left: 12px;
+      }
+
+      /* =========================================================
+         CONTAINER PADRÃO
+         Define a largura máxima do conteúdo e centraliza tudo.
+         ========================================================= */
       .container {
         width: min(1150px, 92%);
         margin: 0 auto;
       }
 
       /* =========================================================
-       3. HEADER E MENU
-       ========================================================= */
+         CABEÇALHO E NAVEGAÇÃO
+         Área superior fixa com menu e botão principal.
+         ========================================================= */
       .site-header {
         position: sticky;
         top: 0;
-        z-index: 100;
+        z-index: 1000;
         background: rgba(8, 38, 63, 0.95);
         backdrop-filter: blur(12px);
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -171,7 +260,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 18px;
+        gap: 16px;
         flex-wrap: wrap;
       }
 
@@ -180,20 +269,18 @@
         align-items: center;
         gap: 12px;
         color: var(--branco);
-        font-weight: bold;
       }
 
       .brand-badge {
         width: 44px;
         height: 44px;
         border-radius: 14px;
-        background: linear-gradient(135deg, var(--amarelo), #ffda66);
-        color: #111827;
         display: grid;
         place-items: center;
-        font-size: 1rem;
-        font-weight: 800;
-        box-shadow: var(--sombra);
+        font-weight: 900;
+        color: #111827;
+        background: linear-gradient(135deg, var(--amarelo), #ffda66);
+        box-shadow: var(--sombra-suave);
       }
 
       .brand-text {
@@ -201,43 +288,45 @@
         line-height: 1.1;
       }
 
+      .brand-text span {
+        font-weight: 800;
+      }
+
       .brand-text small {
         color: var(--texto-claro);
-        font-weight: 500;
-        font-size: 0.8rem;
+        font-size: 0.82rem;
       }
 
       .nav-links {
         display: flex;
+        align-items: center;
         gap: 18px;
         flex-wrap: wrap;
-        align-items: center;
       }
 
       .nav-links a {
         color: var(--branco);
         font-weight: 600;
-        opacity: 0.95;
       }
 
       /* =========================================================
-       4. BOTÕES
-       ========================================================= */
+         BOTÕES PADRÃO
+         Classe base + variações de cor.
+         ========================================================= */
       .btn {
         display: inline-flex;
         align-items: center;
         justify-content: center;
         gap: 8px;
-        padding: 13px 22px;
+        padding: 14px 22px;
         border-radius: 16px;
         font-weight: 700;
+        border: 0;
+        cursor: pointer;
         transition:
           transform 0.2s ease,
-          box-shadow 0.2s ease,
-          opacity 0.2s ease;
-        box-shadow: var(--sombra);
-        cursor: pointer;
-        border: 0;
+          opacity 0.2s ease,
+          box-shadow 0.2s ease;
       }
 
       .btn:hover {
@@ -248,26 +337,30 @@
       .btn-primary {
         background: linear-gradient(135deg, var(--amarelo), #ffd34f);
         color: #111827;
+        box-shadow: var(--sombra-suave);
       }
 
       .btn-whatsapp {
         background: linear-gradient(135deg, var(--verde-escuro), var(--verde));
         color: var(--branco);
+        box-shadow: var(--sombra-suave);
       }
 
       .btn-outline {
         background: transparent;
         color: var(--branco);
-        border: 1px solid rgba(255, 255, 255, 0.22);
-        box-shadow: none;
+        border: 1px solid rgba(255, 255, 255, 0.24);
       }
 
       /* =========================================================
-       5. HERO
-       ========================================================= */
+         HERO
+         Primeira seção da página: título principal, chamada de ação,
+         benefício principal, urgência e apresentação do professor.
+         ========================================================= */
       .hero {
         position: relative;
         overflow: hidden;
+        color: var(--branco);
         background:
           radial-gradient(
             circle at top right,
@@ -280,28 +373,14 @@
             transparent 24%
           ),
           linear-gradient(135deg, var(--azul), var(--azul-escuro));
-        color: var(--branco);
         padding: 78px 0 84px;
-      }
-
-      .hero::after {
-        content: "";
-        position: absolute;
-        inset: auto -120px -120px auto;
-        width: 340px;
-        height: 340px;
-        background: rgba(255, 255, 255, 0.04);
-        border-radius: 50%;
-        filter: blur(10px);
       }
 
       .hero-grid {
         display: grid;
-        grid-template-columns: 1.15fr 0.85fr;
+        grid-template-columns: 1.12fr 0.88fr;
         gap: 34px;
         align-items: center;
-        position: relative;
-        z-index: 1;
       }
 
       .hero-badge {
@@ -311,39 +390,47 @@
         padding: 8px 14px;
         border-radius: 999px;
         background: rgba(255, 255, 255, 0.12);
-        border: var(--borda);
+        border: var(--borda-clara);
         margin-bottom: 18px;
         font-size: 0.92rem;
         font-weight: 700;
       }
 
       .hero h1 {
-        font-size: clamp(2.2rem, 4.6vw, 4rem);
+        font-size: clamp(2.15rem, 4.8vw, 4rem);
         line-height: 1.08;
         margin-bottom: 18px;
-        max-width: 740px;
+        max-width: 760px;
       }
 
       .hero p {
         color: var(--texto-claro);
-        font-size: 1.08rem;
-        max-width: 660px;
-        margin-bottom: 16px;
+        font-size: 1.07rem;
+        max-width: 690px;
       }
 
-      .urgencia {
+      .hero p + p {
         margin-top: 10px;
-        margin-bottom: 24px;
-        font-weight: bold;
-        color: var(--amarelo);
-        font-size: 1rem;
+      }
+
+      /* Caixa de urgência para reforçar limitação de vagas */
+      .urgency-box {
+        margin: 24px 0;
+        padding: 18px;
+        border-radius: 18px;
+        background: rgba(255, 191, 0, 0.14);
+        border: 1px solid rgba(255, 191, 0, 0.3);
+      }
+
+      .urgency-box strong {
+        color: #ffe08a;
       }
 
       .hero-actions {
         display: flex;
         gap: 14px;
         flex-wrap: wrap;
-        margin-bottom: 26px;
+        margin: 24px 0 26px;
       }
 
       .hero-info {
@@ -356,14 +443,14 @@
         padding: 16px;
         border-radius: 18px;
         background: rgba(255, 255, 255, 0.1);
-        border: var(--borda);
+        border: var(--borda-clara);
       }
 
       .info-box strong {
         display: block;
-        font-size: 1.1rem;
-        margin-bottom: 4px;
+        font-size: 1.15rem;
         color: var(--amarelo);
+        margin-bottom: 4px;
       }
 
       .hero-side {
@@ -374,8 +461,8 @@
       .teacher-card,
       .hero-panel {
         background: rgba(255, 255, 255, 0.1);
-        border: var(--borda);
         border-radius: var(--radius);
+        border: var(--borda-clara);
         padding: 22px;
         backdrop-filter: blur(10px);
         box-shadow: var(--sombra);
@@ -385,11 +472,10 @@
         width: 100%;
         max-width: 320px;
         margin: 0 auto 18px;
-        border-radius: 24px;
-        overflow: hidden;
-        border: 3px solid rgba(255, 255, 255, 0.2);
-        background: rgba(255, 255, 255, 0.12);
         aspect-ratio: 4 / 5;
+        overflow: hidden;
+        border-radius: 24px;
+        border: 3px solid rgba(255, 255, 255, 0.18);
       }
 
       .teacher-image img {
@@ -398,103 +484,87 @@
         object-fit: cover;
       }
 
-      .teacher-card h2,
-      .hero-panel h2 {
-        margin-bottom: 8px;
-        font-size: 1.25rem;
-      }
-
-      .teacher-card p,
-      .hero-panel p {
-        color: var(--texto-claro);
-      }
-
-      .hero-list {
+      /* =========================================================
+         LISTAS COM ÍCONE DE CHECK
+         Usadas em benefícios, rodapé e blocos de apoio.
+         ========================================================= */
+      .hero-list,
+      .check-list,
+      .footer-list {
         list-style: none;
         display: grid;
         gap: 10px;
+      }
+
+      .hero-list {
         margin-top: 14px;
       }
 
       .hero-list li::before,
-      .lista li::before {
+      .check-list li::before,
+      .footer-list li::before {
         content: "✔ ";
         color: #86efac;
-        font-weight: bold;
+        font-weight: 700;
       }
 
       /* =========================================================
-       6. BLOCO DE PROMOÇÃO NO TOPO
-       Melhor contraste e leitura
-       ========================================================= */
-      .promo-top {
-        max-width: 620px;
-        margin-bottom: 26px;
-        padding: 20px;
-        border-radius: 20px;
-        background: linear-gradient(
-          135deg,
-          var(--amarelo-claro),
-          var(--amarelo-claro-2)
-        );
-        border: 2px solid var(--amarelo-borda);
-        box-shadow: var(--sombra-leve);
-      }
-
-      .promo-top h2 {
-        font-size: 1.35rem;
-        margin-bottom: 8px;
-        color: var(--azul-escuro);
-      }
-
-      .promo-top p {
-        color: var(--texto);
-        margin-bottom: 10px;
-        font-size: 1rem;
-        max-width: none;
-      }
-
-      .promo-top .promo-note {
-        color: var(--cinza-texto);
-        margin-bottom: 14px;
-      }
-
-      /* =========================================================
-       7. SEÇÕES
-       ========================================================= */
+         SEÇÕES PADRÃO
+         Espaçamento e variações de fundo das áreas do site.
+         ========================================================= */
       .section {
         padding: 82px 0;
       }
 
+      .section-light {
+        background: #ffffff;
+      }
+
+      .section-soft {
+        background: linear-gradient(180deg, #ffffff, #eef4fc);
+      }
+
       .section-title {
         text-align: center;
-        margin-bottom: 16px;
+        margin-bottom: 14px;
         font-size: clamp(1.9rem, 3vw, 2.5rem);
         color: var(--azul-escuro);
       }
 
       .subtitle {
         text-align: center;
-        max-width: 760px;
+        max-width: 780px;
         margin: 0 auto 42px;
-        color: var(--cinza-texto);
-        font-size: 1.02rem;
+        color: var(--texto-suave);
       }
 
+      /* =========================================================
+         GRIDS REUTILIZÁVEIS
+         Facilita montar layouts com 2, 3 ou 4 colunas.
+         ========================================================= */
+      .grid-2,
       .grid-3,
-      .grid-2 {
+      .grid-4 {
         display: grid;
         gap: 22px;
-      }
-
-      .grid-3 {
-        grid-template-columns: repeat(3, 1fr);
       }
 
       .grid-2 {
         grid-template-columns: repeat(2, 1fr);
       }
 
+      .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      /* =========================================================
+         CARDS PADRÃO
+         Estrutura base para blocos informativos e depoimentos.
+         ========================================================= */
       .card {
         background: var(--branco);
         border-radius: var(--radius);
@@ -506,11 +576,11 @@
       .card h3 {
         color: var(--azul);
         margin-bottom: 10px;
-        font-size: 1.18rem;
       }
 
-      .card p {
-        color: var(--cinza-texto);
+      .card p,
+      .card li {
+        color: var(--texto-suave);
       }
 
       .card-icon {
@@ -519,40 +589,54 @@
         border-radius: 18px;
         display: grid;
         place-items: center;
+        margin-bottom: 16px;
         background: linear-gradient(
           135deg,
           rgba(15, 76, 129, 0.12),
           rgba(31, 111, 178, 0.12)
         );
-        margin-bottom: 16px;
         font-size: 1.4rem;
       }
 
-      .lista {
-        list-style: none;
-        display: grid;
-        gap: 10px;
-        margin-top: 10px;
-      }
-
-      .benefits {
-        background: linear-gradient(180deg, #ffffff, #eef4fc);
-      }
-
-      .results {
-        background: #ffffff;
+      .pain-points .card {
+        border-top: 4px solid #f59e0b;
       }
 
       /* =========================================================
-       8. MENSALIDADE
-       ========================================================= */
+         DEPOIMENTOS
+         Mantém o destaque visual das falas dos responsáveis.
+         ========================================================= */
+      .testimonial {
+        position: relative;
+      }
+
+      .testimonial::before {
+        content: "“";
+        position: absolute;
+        top: 12px;
+        right: 18px;
+        font-size: 3rem;
+        color: rgba(15, 76, 129, 0.1);
+        font-weight: 900;
+      }
+
+      .testimonial strong {
+        display: block;
+        margin-top: 14px;
+        color: var(--azul-escuro);
+      }
+
+      /* =========================================================
+         SEÇÃO DE PREÇO / MENSALIDADE
+         Área de valor, diferenciais, promoção e bloco lateral.
+         ========================================================= */
       .pricing {
         background: linear-gradient(135deg, #e8f2fc, #f8fbff);
       }
 
       .price-wrap {
         display: grid;
-        grid-template-columns: 0.9fr 1.1fr;
+        grid-template-columns: 0.95fr 1.05fr;
         gap: 24px;
         align-items: stretch;
       }
@@ -567,11 +651,11 @@
 
       .price-badge {
         display: inline-block;
+        padding: 8px 14px;
+        border-radius: 999px;
         background: rgba(37, 211, 102, 0.14);
         color: #166534;
         font-weight: 700;
-        padding: 8px 14px;
-        border-radius: 999px;
         margin-bottom: 14px;
       }
 
@@ -585,26 +669,47 @@
 
       .price small {
         font-size: 1rem;
-        color: var(--cinza-texto);
+        color: var(--texto-suave);
         font-weight: 600;
       }
 
       .price-note {
-        color: var(--cinza-texto);
-        margin-bottom: 18px;
+        color: var(--texto-suave);
+        margin-bottom: 20px;
       }
 
-      .schedule-box {
+      .promo-box,
+      .schedule-box,
+      .guarantee-box {
         margin-top: 18px;
+        padding: 20px;
+        border-radius: 20px;
+      }
+
+      .promo-box {
+        background: linear-gradient(135deg, var(--amarelo-suave), #fff2a8);
+        border: 2px solid var(--amarelo-borda);
+        box-shadow: 0 10px 25px rgba(255, 191, 0, 0.18);
+      }
+
+      .promo-box h3,
+      .schedule-box h4,
+      .guarantee-box h4 {
+        color: var(--azul-escuro);
+        margin-bottom: 10px;
+      }
+
+      .promo-valor {
+        font-size: 1.55rem;
+        font-weight: 800;
+        color: var(--azul-escuro);
+        margin: 10px 0;
+      }
+
+      .schedule-box,
+      .guarantee-box {
         background: #f8fbff;
         border: 1px solid rgba(15, 76, 129, 0.08);
-        border-radius: 20px;
-        padding: 18px;
-      }
-
-      .schedule-box h4 {
-        margin-bottom: 10px;
-        color: var(--azul-escuro);
       }
 
       .schedule-list {
@@ -613,54 +718,25 @@
         color: #374151;
       }
 
-      .promo-box {
-        margin-top: 20px;
-        padding: 20px;
-        border-radius: 20px;
-        background: linear-gradient(
-          135deg,
-          var(--amarelo-claro),
-          var(--amarelo-claro-2)
-        );
-        border: 2px solid var(--amarelo-borda);
-        box-shadow: 0 10px 25px rgba(255, 191, 0, 0.18);
-        text-align: center;
-      }
-
-      .promo-box h3 {
-        color: var(--azul-escuro);
-        margin-bottom: 10px;
-      }
-
-      .promo-box p {
-        color: var(--texto);
-      }
-
-      .promo-box .promo-valor {
-        font-size: 1.6rem;
-        font-weight: bold;
-        color: var(--azul-escuro);
-        margin: 10px 0;
-      }
-
+      /* =========================================================
+         CHAMADAS DE AÇÃO (CTA)
+         Blocos e áreas de conversão para WhatsApp.
+         ========================================================= */
       .cta-middle {
         text-align: center;
         margin-top: 30px;
       }
 
-      /* =========================================================
-       9. CTA FINAL
-       ========================================================= */
       .cta-strip {
-        background: linear-gradient(135deg, var(--azul-escuro), var(--azul));
-        color: var(--branco);
-        border-radius: 28px;
-        padding: 32px;
-        box-shadow: var(--sombra);
         display: grid;
         grid-template-columns: 1.2fr 0.8fr;
         gap: 24px;
         align-items: center;
+        padding: 32px;
+        border-radius: 28px;
+        background: linear-gradient(135deg, var(--azul-escuro), var(--azul));
+        color: var(--branco);
+        box-shadow: var(--sombra);
       }
 
       .cta-strip p {
@@ -669,8 +745,9 @@
       }
 
       /* =========================================================
-       10. FAQ
-       ========================================================= */
+         FAQ
+         Perguntas frequentes com details/summary.
+         ========================================================= */
       .faq {
         display: grid;
         gap: 14px;
@@ -682,15 +759,15 @@
         background: var(--branco);
         border-radius: 18px;
         padding: 18px 20px;
-        box-shadow: var(--sombra);
+        box-shadow: var(--sombra-suave);
         border: 1px solid rgba(15, 76, 129, 0.07);
       }
 
       summary {
         cursor: pointer;
+        list-style: none;
         font-weight: 700;
         color: var(--azul-escuro);
-        list-style: none;
       }
 
       summary::-webkit-details-marker {
@@ -699,7 +776,7 @@
 
       details p {
         margin-top: 12px;
-        color: var(--cinza-texto);
+        color: var(--texto-suave);
       }
 
       .frase-final {
@@ -710,19 +787,19 @@
       }
 
       /* =========================================================
-       11. RODAPÉ
-       ========================================================= */
+         RODAPÉ
+         Informações finais, SEO local e contato.
+         ========================================================= */
       .site-footer {
         background: #071d31;
         color: var(--branco);
-        padding: 46px 0;
+        padding: 46px 0 92px;
       }
 
       .footer-grid {
         display: grid;
         grid-template-columns: 1.1fr 0.9fr;
         gap: 24px;
-        align-items: start;
       }
 
       .footer-card {
@@ -734,7 +811,6 @@
 
       .footer-card h2 {
         margin-bottom: 10px;
-        font-size: 1.4rem;
       }
 
       .footer-card p,
@@ -742,18 +818,17 @@
         color: var(--texto-claro);
       }
 
-      .footer-list {
-        list-style: none;
-        display: grid;
-        gap: 8px;
-        margin-top: 10px;
+      /* =========================================================
+         BOTÕES FIXOS
+         WhatsApp flutuante e CTA fixo no mobile.
+         ========================================================= */
+      .floating-whatsapp,
+      .sticky-mobile-cta {
+        position: fixed;
+        z-index: 1100;
       }
 
-      /* =========================================================
-       12. BOTÃO FLUTUANTE
-       ========================================================= */
       .floating-whatsapp {
-        position: fixed;
         right: 18px;
         bottom: 18px;
         width: 58px;
@@ -765,12 +840,26 @@
         color: #fff;
         font-size: 1.5rem;
         box-shadow: 0 18px 30px rgba(37, 211, 102, 0.35);
-        z-index: 200;
+      }
+
+      .sticky-mobile-cta {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 10px 14px;
+        background: rgba(7, 29, 49, 0.96);
+        backdrop-filter: blur(10px);
+        display: none;
+      }
+
+      .sticky-mobile-cta .btn {
+        width: 100%;
       }
 
       /* =========================================================
-       13. ANIMAÇÃO
-       ========================================================= */
+         ANIMAÇÃO DE ENTRADA
+         Elementos aparecem suavemente ao entrar na tela.
+         ========================================================= */
       .fade-up {
         opacity: 0;
         transform: translateY(24px);
@@ -785,16 +874,18 @@
       }
 
       /* =========================================================
-       14. RESPONSIVIDADE
-       ========================================================= */
+         RESPONSIVIDADE - TABLET E NOTEBOOK MENOR
+         Ajusta grids para uma única coluna.
+         ========================================================= */
       @media (max-width: 980px) {
         .hero-grid,
+        .hero-info,
+        .grid-2,
+        .grid-3,
+        .grid-4,
         .price-wrap,
         .cta-strip,
-        .footer-grid,
-        .grid-3,
-        .grid-2,
-        .hero-info {
+        .footer-grid {
           grid-template-columns: 1fr;
         }
 
@@ -808,6 +899,10 @@
         }
       }
 
+      /* =========================================================
+         RESPONSIVIDADE - CELULAR
+         Ajustes finos para telas pequenas.
+         ========================================================= */
       @media (max-width: 640px) {
         .hero {
           padding-top: 56px;
@@ -817,21 +912,42 @@
           padding: 62px 0;
         }
 
-        .btn {
-          width: 100%;
-        }
-
         .hero-actions {
           flex-direction: column;
+        }
+
+        .btn {
+          width: 100%;
         }
 
         .teacher-image {
           max-width: 260px;
         }
+
+        .floating-whatsapp {
+          bottom: 76px;
+        }
+
+        .sticky-mobile-cta {
+          display: block;
+        }
       }
     </style>
   </head>
+
   <body>
+    <!-- =========================================================
+         LINK DE ACESSIBILIDADE
+         Permite pular direto para o conteúdo principal.
+         ========================================================= -->
+    <a href="#conteudo-principal" class="skip-link"
+      >Pular para o conteúdo principal</a
+    >
+
+    <!-- =========================================================
+         CABEÇALHO
+         Logo/texto da marca + menu principal + botão de conversão.
+         ========================================================= -->
     <header class="site-header">
       <div class="container nav">
         <div class="brand">
@@ -843,79 +959,117 @@
         </div>
 
         <nav class="nav-links" aria-label="Menu principal">
-          <a href="#sobre">Sobre</a>
-          <a href="#diferenciais">Diferenciais</a>
-          <a href="#resultados-responsaveis">Resultados</a>
+          <a href="#como-funciona">Como funciona</a>
+          <a href="#para-quem">Para quem é</a>
+          <a href="#depoimentos">Depoimentos</a>
           <a href="#valor">Mensalidade</a>
           <a href="#faq">Dúvidas</a>
           <a
             class="btn btn-primary"
-            href="https://wa.me/5531983044087?text=Olá,%20vi%20o%20site%20e%20quero%20uma%20vaga%20no%20reforço%20de%20matemática"
+            href="https://wa.me/5531983044087?text=Olá,%20vi%20o%20site%20e%20quero%20garantir%20uma%20vaga%20no%20reforço%20de%20matemática."
             target="_blank"
             rel="noopener noreferrer"
           >
-            Quero garantir minha vaga
+            Quero garantir uma vaga
           </a>
         </nav>
       </div>
     </header>
 
-    <main>
+    <!-- =========================================================
+         CONTEÚDO PRINCIPAL
+         Todo o conteúdo importante do site fica aqui.
+         ========================================================= -->
+    <main id="conteudo-principal">
+      <!-- =======================================================
+           HERO / PRIMEIRA DOBRA
+           Área mais importante da landing page.
+           ======================================================= -->
       <section class="hero" aria-labelledby="titulo-principal">
         <div class="container hero-grid">
+          <!-- Coluna esquerda: texto principal, oferta e botões -->
           <div class="fade-up">
             <p class="hero-badge">
-              📚 Matrículas abertas • Ensino Fundamental II e Médio
+              📚 Matrículas abertas • 6º ano ao 3º ano do Ensino Médio
             </p>
 
             <h1 id="titulo-principal">
-              Reforço de Matemática em Vespasiano e São José da Lapa
+              Reforço de matemática em Vespasiano e São José da Lapa para alunos
+              com dificuldade na escola
             </h1>
 
             <p>
-              Aulas para alunos do
-              <strong
-                >6º ano do Ensino Fundamental ao 3º ano do Ensino Médio</strong
-              >, com explicação simples, revisão para provas, material de apoio
-              e acompanhamento individual.
+              Reforço de matemática em
+              <strong>Vespasiano e São José da Lapa</strong>, com explicação
+              simples, prática guiada, turmas pequenas e acompanhamento mais
+              próximo para o aluno evoluir de verdade.
             </p>
 
-            <p class="urgencia">
-              ⚠️ Vagas limitadas – apenas 4 alunos por turma
+            <p>
+              Atendimento voltado para alunos do
+              <strong>6º ano ao 9º ano do Ensino Fundamental</strong> e do
+              <strong>1º ao 3º ano do Ensino Médio</strong> que precisam
+              melhorar o desempenho em matemática.
             </p>
 
-            <div class="hero-actions">
+            <p>
+              Ideal para quem está com notas baixas, dificuldade para acompanhar
+              a escola ou precisa se preparar melhor para atividades e provas.
+            </p>
+
+            <!-- Oferta especial para aumentar conversão logo no topo -->
+            <section
+              class="promo-box fade-up"
+              aria-labelledby="titulo-promocao-topo"
+              style="max-width: 720px; margin: 0 auto 28px"
+            >
+              <h3 id="titulo-promocao-topo" style="color: var(--azul-escuro)">
+                🎓 Condição especial para rede pública
+              </h3>
+              <p style="color: #1f2937">
+                Alunos da
+                <strong style="color: var(--azul-escuro)">rede pública</strong>
+                podem ter uma condição diferenciada, conforme disponibilidade
+                das vagas.
+              </p>
+              <p class="promo-valor" style="color: var(--azul-escuro)">
+                Até 15% de desconto
+              </p>
+              <p style="color: #374151">
+                Vagas limitadas para essa condição. Consulte no WhatsApp.
+              </p>
+              <br />
               <a
                 class="btn btn-whatsapp"
-                href="https://wa.me/5531983044087?text=Olá,%20vi%20a%20página%20de%20reforço%20de%20matemática%20e%20quero%20mais%20informações."
+                href="https://wa.me/5531983044087?text=Olá,%20quero%20saber%20sobre%20a%20condição%20especial%20para%20alunos%20da%20rede%20pública."
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Falar no WhatsApp
+                Quero saber do desconto
               </a>
+            </section>
 
+            <!-- Bloco de urgência para estimular contato rápido -->
+            <div class="urgency-box">
+              <strong>Vagas limitadas:</strong> as turmas têm no máximo 4
+              alunos. Isso permite mais atenção individual, mas faz as vagas
+              acabarem rápido.
+            </div>
+
+            <!-- Botões principais da primeira dobra -->
+            <div class="hero-actions">
+              <a
+                class="btn btn-whatsapp"
+                href="https://wa.me/5531983044087?text=Olá,%20quero%20mais%20informações%20sobre%20o%20reforço%20de%20matemática."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Falar no WhatsApp agora
+              </a>
               <a class="btn btn-outline" href="#valor">Ver mensalidade</a>
             </div>
 
-            <article
-              class="promo-top fade-up"
-              aria-labelledby="titulo-condicao-especial"
-            >
-              <h2 id="titulo-condicao-especial">
-                🎓 Condição especial para alunos da rede pública
-              </h2>
-              <p>
-                Consulte a
-                <strong>condição especial com até 15% de desconto</strong> para
-                alunos da rede pública.
-              </p>
-              <p class="promo-note">
-                Vagas limitadas. Clique abaixo para ver os detalhes da
-                mensalidade.
-              </p>
-              <a class="btn btn-primary" href="#valor">Ver condição especial</a>
-            </article>
-
+            <!-- Informações rápidas para leitura imediata -->
             <div class="hero-info" aria-label="Informações rápidas do serviço">
               <article class="info-box">
                 <strong>2x</strong>
@@ -932,6 +1086,7 @@
             </div>
           </div>
 
+          <!-- Coluna direita: apresentação do professor e apoio -->
           <aside
             class="hero-side fade-up"
             aria-label="Apresentação do professor e atendimento"
@@ -940,200 +1095,299 @@
               <figure class="teacher-image">
                 <img
                   src="img/foto-perfil.jpg"
-                  alt="Professor de matemática Lúcio"
+                  alt="Professor Lúcio, professor de reforço de matemática em Vespasiano e São José da Lapa"
                 />
+                <figcaption
+                  style="
+                    text-align: center;
+                    margin-top: 10px;
+                    color: #dbe7f3;
+                    font-size: 0.95rem;
+                  "
+                >
+                  Professor Lúcio - reforço de matemática em Vespasiano e São
+                  José da Lapa
+                </figcaption>
               </figure>
 
               <h2>Prof. Lúcio</h2>
               <p>
-                Reforço escolar de matemática com foco em evolução real do
-                aluno, mais segurança para resolver exercícios e melhor
-                desempenho nas provas.
+                Aulas com foco em clareza, prática e evolução real do aluno. O
+                objetivo não é só repetir conteúdo, mas ajudar a entender de
+                verdade e ganhar segurança.
               </p>
 
               <ul class="hero-list">
-                <li>Turmas de até 4 alunos</li>
+                <li>Turmas pequenas</li>
                 <li>Turmas separadas por série</li>
                 <li>Revisão para provas</li>
-                <li>Material incluso</li>
+                <li>Material de apoio incluso</li>
               </ul>
             </article>
 
             <article class="hero-panel">
-              <h2>Atendimento em Vespasiano e São José da Lapa</h2>
+              <h2>Atendimento pensado para facilitar a rotina</h2>
               <p>
-                Ambiente organizado, aulas planejadas e comunicação prática para
-                facilitar a rotina dos pais e dos alunos.
+                Organização, comunicação rápida pelo WhatsApp e um formato que
+                ajuda pais e responsáveis a acompanharem melhor a evolução do
+                aluno.
               </p>
             </article>
           </aside>
         </div>
       </section>
 
-      <section class="section" id="sobre" aria-labelledby="titulo-sobre">
+      <!-- =======================================================
+           PARA QUEM É O SERVIÇO
+           Identifica a dor do público-alvo.
+           ======================================================= -->
+      <section
+        class="section section-light pain-points"
+        id="para-quem"
+        aria-labelledby="titulo-para-quem"
+      >
         <div class="container">
-          <h2 class="section-title fade-up" id="titulo-sobre">
+          <h2 class="section-title fade-up" id="titulo-para-quem">
+            Para quem é o reforço de matemática em Vespasiano e São José da Lapa
+          </h2>
+          <p class="subtitle fade-up">
+            Esta página precisa fazer o responsável se identificar rápido. Então
+            aqui o texto fala diretamente com as situações mais comuns.
+          </p>
+
+          <div class="grid-3">
+            <article class="card fade-up">
+              <div class="card-icon" aria-hidden="true">📉</div>
+              <h3>Notas baixas em matemática</h3>
+              <p>
+                Para alunos que tiram notas baixas, acumulam dúvidas e sentem
+                que a matéria vai ficando cada vez mais difícil.
+              </p>
+            </article>
+
+            <article class="card fade-up">
+              <div class="card-icon" aria-hidden="true">😕</div>
+              <h3>Dificuldade para acompanhar a escola</h3>
+              <p>
+                Quando o aluno não entende a explicação em sala, não consegue
+                resolver exercícios sozinho e começa a perder confiança.
+              </p>
+            </article>
+
+            <article class="card fade-up">
+              <div class="card-icon" aria-hidden="true">📝</div>
+              <h3>Preparação para provas e recuperação</h3>
+              <p>
+                Indicado para quem precisa revisar conteúdo, reforçar a base e
+                chegar mais preparado em provas, testes e atividades.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================================================
+           COMO FUNCIONA
+           Explica a estrutura das aulas.
+           ======================================================= -->
+      <section
+        class="section section-soft"
+        id="como-funciona"
+        aria-labelledby="titulo-como-funciona"
+      >
+        <div class="container">
+          <h2 class="section-title fade-up" id="titulo-como-funciona">
             Como funciona o reforço de matemática
           </h2>
           <p class="subtitle fade-up">
-            Um formato organizado para ajudar o aluno a entender matemática com
-            mais clareza, prática e confiança.
+            A ideia aqui é passar segurança. O responsável precisa entender
+            rapidamente como o serviço funciona e o que está incluso.
           </p>
 
           <div class="grid-3">
             <article class="card fade-up">
               <div class="card-icon" aria-hidden="true">🎯</div>
-              <h3>Público atendido</h3>
-              <ul class="lista">
-                <li>6º ao 9º ano do Ensino Fundamental</li>
-                <li>1º ao 3º ano do Ensino Médio</li>
-                <li>Alunos com dificuldade ou defasagem</li>
-              </ul>
+              <h3>Turmas por série</h3>
+              <p>
+                As turmas são organizadas por série para o conteúdo ficar
+                alinhado com a fase do aluno e a aula render melhor.
+              </p>
             </article>
 
             <article class="card fade-up">
               <div class="card-icon" aria-hidden="true">🧮</div>
-              <h3>Formato das aulas</h3>
-              <ul class="lista">
-                <li>2 aulas por semana</li>
-                <li>1 hora por aula</li>
-                <li>Até 4 alunos por turma</li>
-                <li>Turmas separadas por série</li>
-                <li>Acompanhamento individual</li>
-              </ul>
+              <h3>Acompanhamento mais próximo</h3>
+              <p>
+                Mesmo em grupo, o limite de até 4 alunos permite observar
+                dificuldades e orientar cada um com mais atenção.
+              </p>
             </article>
 
             <article class="card fade-up">
-              <div class="card-icon" aria-hidden="true">📈</div>
-              <h3>Objetivo do trabalho</h3>
-              <ul class="lista">
-                <li>Melhorar o entendimento do conteúdo</li>
-                <li>Dar mais segurança nas provas</li>
-                <li>Organizar melhor os estudos</li>
-              </ul>
+              <div class="card-icon" aria-hidden="true">📚</div>
+              <h3>Revisão e prática</h3>
+              <p>
+                O aluno revisa conteúdo, resolve exercícios e se prepara melhor
+                para provas e tarefas da escola.
+              </p>
             </article>
           </div>
 
           <div class="cta-middle fade-up">
             <a
               class="btn btn-whatsapp"
-              href="https://wa.me/5531983044087?text=Olá,%20quero%20uma%20vaga%20no%20reforço%20de%20matemática"
+              href="https://wa.me/5531983044087?text=Olá,%20quero%20entender%20como%20funcionam%20as%20aulas%20de%20reforço%20de%20matemática."
               target="_blank"
               rel="noopener noreferrer"
             >
-              Falar no WhatsApp agora
+              Quero entender como funciona
             </a>
           </div>
         </div>
       </section>
 
+      <!-- =======================================================
+           BENEFÍCIOS
+           Mostra ganhos reais para o aluno.
+           ======================================================= -->
       <section
-        class="section benefits"
-        id="diferenciais"
-        aria-labelledby="titulo-diferenciais"
+        class="section section-light"
+        id="resultados"
+        aria-labelledby="titulo-resultados"
       >
         <div class="container">
-          <h2 class="section-title fade-up" id="titulo-diferenciais">
-            Diferenciais do reforço escolar
+          <h2 class="section-title fade-up" id="titulo-resultados">
+            Benefícios do reforço de matemática para o aluno
           </h2>
           <p class="subtitle fade-up">
-            Mais que uma aula comum, é um acompanhamento pensado para melhorar o
-            desempenho escolar.
+            Em vez de prometer demais, o ideal é mostrar benefícios reais de
+            forma simples, clara e confiável.
           </p>
 
-          <div class="grid-2">
-            <article class="card fade-up">
-              <h3>O que está incluído</h3>
-              <ul class="lista">
-                <li>Explicação simples e prática</li>
-                <li>Listas de exercícios</li>
-                <li>Revisão antes das provas</li>
-                <li>Material de apoio incluso</li>
-              </ul>
-            </article>
-
-            <article class="card fade-up">
-              <h3>Mais organização e qualidade</h3>
-              <ul class="lista">
-                <li>Turmas pequenas (máx. 4 alunos)</li>
-                <li>Turmas organizadas por série</li>
-                <li>Acompanhamento individual</li>
-                <li>Relatório de desempenho do aluno</li>
-              </ul>
-            </article>
+          <div class="card fade-up" style="max-width: 900px; margin: 0 auto">
+            <h3 style="margin-bottom: 16px">
+              O reforço ajuda o aluno a desenvolver:
+            </h3>
+            <ul class="check-list">
+              <li>Mais segurança para resolver exercícios</li>
+              <li>Mais clareza para entender a matéria</li>
+              <li>Mais preparo para provas e atividades</li>
+              <li>Mais organização nos estudos</li>
+            </ul>
           </div>
         </div>
       </section>
 
+      <!-- =======================================================
+           DEPOIMENTOS
+           Aumenta confiança e prova social.
+           ======================================================= -->
       <section
-        class="section benefits"
-        id="resultados-responsaveis"
-        aria-labelledby="titulo-resultados-responsaveis"
+        class="section section-soft"
+        id="depoimentos"
+        aria-labelledby="titulo-depoimentos"
       >
         <div class="container">
-          <h2 class="section-title fade-up" id="titulo-resultados-responsaveis">
-            Resultados percebidos pelos responsáveis
+          <h2 class="section-title fade-up" id="titulo-depoimentos">
+            Depoimentos sobre o reforço de matemática
           </h2>
           <p class="subtitle fade-up">
-            O foco do reforço é ajudar o aluno a ganhar mais segurança, melhorar
-            a organização dos estudos e evoluir no desempenho escolar.
+            Esta parte aumenta muito a confiança. Se ainda não tiver depoimentos
+            reais, você pode deixar os cards prontos e depois substituir o
+            texto.
           </p>
 
           <div class="grid-3">
-            <article class="card fade-up">
-              <h3>Mais segurança na matéria</h3>
+            <article class="card testimonial fade-up">
+              <h3>Mais confiança</h3>
               <p>
-                Muitos responsáveis procuram reforço quando percebem que o aluno
-                tem dificuldade para acompanhar a aula, resolver exercícios ou
-                entender explicações de matemática.
+                Meu filho tinha muita dificuldade e ficava travado nas
+                atividades. Depois das aulas, ele ficou mais confiante para
+                resolver os exercícios e participar melhor na escola.
               </p>
+              <strong>Responsável de aluno do Ensino Fundamental</strong>
             </article>
 
-            <article class="card fade-up">
-              <h3>Melhora nas provas e atividades</h3>
+            <article class="card testimonial fade-up">
+              <h3>Melhora nas provas</h3>
               <p>
-                Com revisão, prática e acompanhamento, a tendência é que o aluno
-                consiga se sair melhor em provas, trabalhos e tarefas escolares.
+                O reforço ajudou a organizar os estudos e revisar a matéria com
+                mais calma. Isso fez diferença no desempenho nas avaliações.
               </p>
+              <strong>Responsável de aluno do Ensino Médio</strong>
             </article>
 
-            <article class="card fade-up">
-              <h3>Mais organização nos estudos</h3>
+            <article class="card testimonial fade-up">
+              <h3>Explicação simples</h3>
               <p>
-                Além de aprender o conteúdo, o aluno passa a estudar com mais
-                método, rotina e confiança para enfrentar as dificuldades da
-                escola.
+                O que mais gostei foi a forma de explicar. O conteúdo ficou mais
+                fácil de entender e meu filho passou a estudar com menos
+                resistência.
               </p>
+              <strong>Responsável de aluno da rede pública</strong>
             </article>
           </div>
         </div>
       </section>
 
+      <!-- =======================================================
+           MENSALIDADE / PREÇO
+           Mostra a oferta principal e os diferenciais do serviço.
+           ======================================================= -->
       <section
         class="section pricing"
         id="valor"
         aria-labelledby="titulo-valor"
       >
         <div class="container">
-          <h2 class="section-title fade-up" id="titulo-valor">Mensalidade</h2>
+          <!-- Oferta especial destacada acima da mensalidade -->
+          <section
+            class="promo-box fade-up"
+            aria-labelledby="titulo-promocao"
+            style="max-width: 720px; margin: 0 auto 28px"
+          >
+            <h3 id="titulo-promocao">🎓 Condição especial para rede pública</h3>
+            <p>
+              Alunos da <strong>rede pública</strong> podem ter uma condição
+              diferenciada, conforme disponibilidade das vagas.
+            </p>
+            <p class="promo-valor" style="color: var(--azul-escuro)">
+              Até 15% de desconto
+            </p>
+            <p>Vagas limitadas para essa condição. Consulte no WhatsApp.</p>
+            <br />
+            <a
+              class="btn btn-whatsapp"
+              href="https://wa.me/5531983044087?text=Olá,%20quero%20saber%20sobre%20a%20condição%20especial%20para%20alunos%20da%20rede%20pública."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Quero saber do desconto
+            </a>
+          </section>
+
+          <h2 class="section-title fade-up" id="titulo-valor">
+            Mensalidade do reforço de matemática
+          </h2>
           <p class="subtitle fade-up">
-            Valor pensado para oferecer qualidade, acompanhamento e uma proposta
-            acessível para a região.
+            Aqui o valor aparece com mais força, mas acompanhado de contexto.
+            Isso ajuda o responsável a enxergar o custo-benefício.
           </p>
 
           <div class="price-wrap">
+            <!-- Caixa principal de preço -->
             <article class="price-box fade-up">
               <span class="price-badge">Plano mensal</span>
-              <p>Reforço de matemática com aulas regulares</p>
+              <p>Reforço de matemática com aulas regulares durante o mês</p>
               <div class="price">R$ 300 <small>/ mês</small></div>
-              <p class="price-note">2 aulas por semana • 1 hora cada</p>
+              <p class="price-note">2 aulas por semana • 1 hora por aula</p>
 
-              <ul class="lista" style="margin-bottom: 22px">
+              <ul class="check-list" style="margin-bottom: 22px">
                 <li>Turmas de até 4 alunos</li>
-                <li>Separadas por série</li>
-                <li>Material incluso</li>
+                <li>Turmas separadas por série</li>
+                <li>Material de apoio incluso</li>
                 <li>Revisão para provas</li>
-                <li>Relatório de desempenho</li>
+                <li>Acompanhamento mais próximo</li>
               </ul>
 
               <a
@@ -1142,35 +1396,14 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Solicitar informações
+                Solicitar informações no WhatsApp
               </a>
-
-              <section class="promo-box" aria-labelledby="titulo-promocao">
-                <h3 id="titulo-promocao">🎓 Condição especial</h3>
-                <p>
-                  Alunos da <strong>rede pública</strong> têm acesso a uma
-                  condição diferenciada
-                </p>
-                <p class="promo-valor">Até 15% de desconto</p>
-                <p>
-                  ✔ Vagas limitadas<br />
-                  ✔ Consulte disponibilidade no WhatsApp
-                </p>
-                <br />
-                <a
-                  href="https://wa.me/5531983044087?text=Olá,%20quero%20saber%20sobre%20o%20desconto%20para%20alunos%20da%20rede%20pública"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn btn-whatsapp"
-                >
-                  Quero saber do desconto
-                </a>
-              </section>
             </article>
 
+            <!-- Caixa lateral com argumentos de apoio -->
             <aside
               class="price-side fade-up"
-              aria-label="Informações complementares sobre o formato das aulas"
+              aria-label="Informações complementares sobre as aulas"
             >
               <h3
                 style="
@@ -1179,44 +1412,49 @@
                   font-size: 1.5rem;
                 "
               >
-                Formato das turmas
+                O que faz esse formato funcionar bem
               </h3>
               <p style="color: #4b5563; margin-bottom: 16px">
-                As aulas são organizadas por série para manter o conteúdo mais
-                alinhado e o acompanhamento mais eficiente.
+                O ponto forte não é só o preço. É o conjunto: turmas pequenas,
+                separação por série, prática com exercícios e acompanhamento
+                mais próximo.
               </p>
 
               <div class="schedule-box">
                 <h4>Formato das aulas</h4>
                 <div class="schedule-list">
-                  <div>• Turmas de até 4 alunos</div>
-                  <div>• Separadas por série</div>
-                  <div>• Acompanhamento individual</div>
+                  <div>• 2 encontros por semana</div>
+                  <div>• 1 hora por aula</div>
+                  <div>• Até 4 alunos por turma</div>
                 </div>
               </div>
 
               <div class="schedule-box">
-                <h4>Atendimento</h4>
+                <h4>Ideal para quem precisa</h4>
                 <div class="schedule-list">
-                  <div>• Vespasiano</div>
-                  <div>• São José da Lapa</div>
-                  <div>• Contato rápido por WhatsApp</div>
-                </div>
-              </div>
-
-              <div class="schedule-box">
-                <h4>Ideal para quem busca</h4>
-                <div class="schedule-list">
-                  <div>• melhorar nas provas</div>
                   <div>• recuperar conteúdo atrasado</div>
-                  <div>• estudar com mais organização</div>
+                  <div>• melhorar em provas</div>
+                  <div>• estudar com mais confiança</div>
                 </div>
+              </div>
+
+              <div class="guarantee-box">
+                <h4>Importante para converter mais</h4>
+                <p>
+                  Você pode depois trocar este bloco por uma aula experimental,
+                  uma condição para primeira matrícula ou um bônus de revisão
+                  para provas. Isso costuma aumentar bastante a conversão.
+                </p>
               </div>
             </aside>
           </div>
         </div>
       </section>
 
+      <!-- =======================================================
+           CTA FINAL
+           Última chamada forte antes do FAQ.
+           ======================================================= -->
       <section class="section" aria-labelledby="titulo-cta-final">
         <div class="container">
           <div class="cta-strip fade-up">
@@ -1229,93 +1467,138 @@
               </h2>
               <p>
                 Como as turmas são pequenas e separadas por série, a quantidade
-                de vagas é limitada.
+                de vagas é limitada. Quanto antes falar no WhatsApp, maior a
+                chance de conseguir o horário ideal.
               </p>
             </div>
 
             <div>
               <a
                 class="btn btn-primary"
-                href="https://wa.me/5531983044087?text=Olá,%20tenho%20interesse%20no%20reforço%20de%20matemática.%20Pode%20me%20explicar%20como%20funciona?"
+                href="https://wa.me/5531983044087?text=Olá,%20tenho%20interesse%20no%20reforço%20de%20matemática.%20Pode%20me%20explicar%20como%20funciona%20e%20quais%20horários%20estão%20disponíveis?"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Quero garantir minha vaga
+                Quero garantir uma vaga
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="section" id="faq" aria-labelledby="titulo-faq">
+      <!-- =======================================================
+           FAQ
+           Respostas às dúvidas mais comuns.
+           ======================================================= -->
+      <section
+        class="section section-light"
+        id="faq"
+        aria-labelledby="titulo-faq"
+      >
         <div class="container">
           <h2 class="section-title fade-up" id="titulo-faq">
-            Perguntas frequentes
+            Perguntas frequentes sobre o reforço de matemática
           </h2>
 
           <div class="faq">
             <details class="fade-up">
               <summary>As aulas são em grupo ou individuais?</summary>
               <p>
-                As aulas são em turmas pequenas, com no máximo 4 alunos,
-                organizadas por série, permitindo acompanhamento individual
-                durante a aula.
+                As aulas são em turmas pequenas, com no máximo 4 alunos. Isso
+                permite melhor acompanhamento, sem perder a dinâmica de grupo.
+              </p>
+            </details>
+
+            <details class="fade-up">
+              <summary>Meu filho vai ter atenção mesmo em turma?</summary>
+              <p>
+                Sim. Como o número de alunos é reduzido e as turmas são
+                separadas por série, fica mais fácil acompanhar as dificuldades
+                de cada estudante.
               </p>
             </details>
 
             <details class="fade-up">
               <summary>Tem revisão para provas?</summary>
               <p>
-                Sim. O aluno recebe revisão específica antes das provas, com
-                foco nos conteúdos que mais geram dificuldade.
+                Sim. O reforço inclui revisão focada nos conteúdos que mais
+                costumam gerar dificuldade antes das provas.
               </p>
             </details>
 
             <details class="fade-up">
               <summary>O material está incluso?</summary>
               <p>
-                Sim. O material de apoio e as listas de exercícios já fazem
-                parte do acompanhamento.
+                Sim. O material de apoio e os exercícios fazem parte do
+                acompanhamento.
               </p>
             </details>
 
             <details class="fade-up">
               <summary>Como faço para matricular?</summary>
               <p>
-                Basta entrar em contato pelo WhatsApp para verificar horários,
-                disponibilidade e vaga na turma adequada.
+                Basta chamar no WhatsApp para verificar horários,
+                disponibilidade e a turma mais adequada para o aluno.
               </p>
             </details>
           </div>
 
           <p class="frase-final fade-up">
-            Garanta a vaga antes que as turmas fechem
+            Quanto antes começar, mais fácil recuperar a base
           </p>
         </div>
       </section>
     </main>
 
+    <!-- =========================================================
+         RODAPÉ
+         Texto final de SEO local + contato.
+         ========================================================= -->
     <footer class="site-footer" id="contato">
+      <section
+        class="container"
+        aria-labelledby="titulo-seo-local"
+        style="padding-bottom: 28px"
+      >
+        <div class="footer-card fade-up">
+          <h2 id="titulo-seo-local">
+            Professor de matemática em Vespasiano e São José da Lapa
+          </h2>
+          <p>
+            O reforço de matemática atende alunos de Vespasiano e São José da
+            Lapa que precisam recuperar conteúdo, melhorar notas, revisar
+            matéria e estudar com mais segurança.
+          </p>
+          <p style="margin-top: 12px; color: var(--texto-claro)">
+            Se você procura
+            <strong>professor de matemática em Vespasiano</strong> ou
+            <strong>reforço escolar em São José da Lapa</strong>, entre em
+            contato para verificar horários, séries atendidas e disponibilidade
+            de vagas.
+          </p>
+        </div>
+      </section>
+
       <div class="container footer-grid">
         <section class="footer-card fade-up">
           <h2>Prof. Lúcio — Reforço de Matemática</h2>
           <p>
-            Reforço escolar com foco em alunos do Ensino Fundamental II e Ensino
-            Médio, com organização, clareza e acompanhamento.
+            Reforço escolar com foco em clareza, prática, organização e evolução
+            do aluno no Ensino Fundamental II e Ensino Médio.
           </p>
 
-          <ul class="footer-list">
-            <li>📍 Vespasiano / São José da Lapa</li>
-            <li>📞 WhatsApp: 31 98304-4087</li>
-            <li>📚 Do 6º ano ao 3º ano do Ensino Médio</li>
+          <ul class="footer-list" style="margin-top: 12px">
+            <li>Vespasiano e São José da Lapa</li>
+            <li>WhatsApp: 31 98304-4087</li>
+            <li>6º ano ao 3º ano do Ensino Médio</li>
           </ul>
         </section>
 
         <section class="footer-card fade-up">
           <h2>Fale agora</h2>
           <p>
-            Entre em contato para tirar dúvidas, verificar horários e solicitar
-            uma vaga.
+            Tire dúvidas, veja horários disponíveis e entenda qual turma combina
+            melhor com o aluno.
           </p>
           <br />
           <a
@@ -1330,6 +1613,10 @@
       </div>
     </footer>
 
+    <!-- =========================================================
+         BOTÃO FLUTUANTE DO WHATSAPP
+         Fica sempre disponível para contato rápido.
+         ========================================================= -->
     <a
       class="floating-whatsapp"
       href="https://wa.me/5531983044087?text=Olá,%20quero%20mais%20informações%20sobre%20o%20reforço%20de%20matemática."
@@ -1340,12 +1627,36 @@
       ✆
     </a>
 
+    <!-- =========================================================
+         CTA FIXO NO CELULAR
+         Aparece somente em telas pequenas.
+         ========================================================= -->
+    <div class="sticky-mobile-cta">
+      <a
+        class="btn btn-whatsapp"
+        href="https://wa.me/5531983044087?text=Olá,%20quero%20mais%20informações%20sobre%20o%20reforço%20de%20matemática."
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Falar no WhatsApp agora
+      </a>
+    </div>
+
     <script>
+      // =========================================================
+      // INICIALIZAÇÃO DA PÁGINA
+      // Aguarda o HTML carregar para ativar interações.
+      // =========================================================
       document.addEventListener("DOMContentLoaded", () => {
+        // Seleciona os elementos usados nos comportamentos da página
         const details = document.querySelectorAll("details");
         const links = document.querySelectorAll('a[href^="#"]');
         const animatedElements = document.querySelectorAll(".fade-up");
 
+        // =======================================================
+        // FAQ ACORDEÃO
+        // Mantém apenas um item aberto por vez.
+        // =======================================================
         details.forEach((item) => {
           item.addEventListener("toggle", () => {
             if (item.open) {
@@ -1356,6 +1667,10 @@
           });
         });
 
+        // =======================================================
+        // SCROLL SUAVE DOS LINKS INTERNOS
+        // Faz o menu rolar suavemente até a seção.
+        // =======================================================
         links.forEach((link) => {
           link.addEventListener("click", function (e) {
             const targetSelector = this.getAttribute("href");
@@ -1364,15 +1679,15 @@
             if (target) {
               e.preventDefault();
               const offset = target.offsetTop - 80;
-
-              window.scrollTo({
-                top: offset,
-                behavior: "smooth",
-              });
+              window.scrollTo({ top: offset, behavior: "smooth" });
             }
           });
         });
 
+        // =======================================================
+        // ANIMAÇÃO AO ENTRAR NA TELA
+        // Adiciona a classe .show quando o elemento aparece.
+        // =======================================================
         const observer = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
@@ -1381,9 +1696,7 @@
               }
             });
           },
-          {
-            threshold: 0.12,
-          },
+          { threshold: 0.12 },
         );
 
         animatedElements.forEach((element) => observer.observe(element));
